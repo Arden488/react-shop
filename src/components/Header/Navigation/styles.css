@@ -1,0 +1,11 @@
+.header-navigation {
+  display: grid;
+  grid-auto-flow: column;
+  grid-column-gap: 10px;
+}
+
+.header-navigation__item {
+  font-size: 14px;
+  text-decoration: none;
+  color: #000;
+}

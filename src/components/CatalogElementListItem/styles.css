@@ -1,0 +1,29 @@
+.product-item:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, .15);
+}
+
+.product-item__image {
+  text-align: center;
+}
+
+.product-item__image img {
+  max-width: 100%;
+}
+
+.product-item__link {
+  display: block;
+  padding: 20px;
+  color: black;
+  text-decoration: none;
+}
+
+.product-item__title {
+  display: block;
+  margin: 10px 0;
+}
+
+.product-item__controls {
+  display: grid;
+  grid-auto-flow: column;
+  justify-content: space-between;
+}
