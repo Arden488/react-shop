@@ -1,11 +1,11 @@
 const mainNavItems = [
   {
     path: '/',
-    title: 'Главная',
+    title: 'Home',
   },
   {
     path: '/catalog',
-    title: 'Каталог',
+    title: 'Catalog',
   },
   {
     path: '/catalog/iphone',
@@ -25,11 +25,11 @@ const mainNavItems = [
   },
   {
     path: '/news',
-    title: 'Акции и новости',
+    title: 'News and events',
   },
   {
     path: '/payment-and-delivery',
-    title: 'Доставка и оплата',
+    title: 'Delivery and payment',
   },
 ]
 
