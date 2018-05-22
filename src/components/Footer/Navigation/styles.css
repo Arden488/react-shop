@@ -1,5 +1,12 @@
 .footer-navigation {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+  grid-column-gap: 10px;
+  grid-row-gap: 5px;
+}
+
+.footer-navigation__item {
+  color: #666;
+  font-size: 13px;
+  text-decoration: none;
 }

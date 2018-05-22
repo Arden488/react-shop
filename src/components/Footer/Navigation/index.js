@@ -7,7 +7,7 @@ import './styles.css';
 
 const Navigation = () => (
   <nav className="footer-navigation">
-    {mainNavItems.map(item => <Link key={item.path} to={item.path}>{item.title}</Link>)}
+    {mainNavItems.map(item => <Link className="footer-navigation__item" key={item.path} to={item.path}>{item.title}</Link>)}
   </nav>
 );
 
