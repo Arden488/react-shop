@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
+import feather from 'feather-icons';
 
-const Auth = () => (
-  <div>
-    <Link to="/login">Login</Link>
-    <Link to="/registration">Register</Link>
-  </div>
-);
+class Auth extends Component {
+  componentDidMount() {
+    feather.replace();
+  }
+
+  render() {
+    return (
+      <div>
+        <i data-feather="user" />
+      </div>
+    );
+  }
+}
 
 export default Auth;

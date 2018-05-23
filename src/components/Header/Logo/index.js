@@ -1,5 +1,18 @@
-import React from 'react';
+import React, { Component } from 'react';
+import feather from 'feather-icons';
 
-const Logo = () => <div>Logo</div>;
+class Logo extends Component {
+  componentDidMount() {
+    feather.replace();
+  }
+
+  render() {
+    return (
+      <div>
+        <i data-feather="zap" />
+      </div>
+    );
+  }
+}
 
 export default Logo;
