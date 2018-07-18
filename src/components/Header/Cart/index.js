@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import feather from 'feather-icons';
 
+import './styles.css';
+
 class Cart extends Component {
   componentDidMount() {
     feather.replace();
@@ -8,7 +10,7 @@ class Cart extends Component {
 
   render() {
     return (
-      <div>
+      <div className="header-cart">
         <i data-feather="shopping-cart" />
       </div>
     );
