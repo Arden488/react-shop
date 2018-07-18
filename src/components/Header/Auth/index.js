@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
 import feather from 'feather-icons';
+
+import './styles.css';
 
 class Auth extends Component {
   componentDidMount() {
@@ -9,7 +10,7 @@ class Auth extends Component {
 
   render() {
     return (
-      <div>
+      <div className="header-auth">
         <i data-feather="user" />
       </div>
     );
