@@ -2,8 +2,12 @@
   display: grid;
   grid-template-columns: 200px auto 40px 40px;
   grid-column-gap: 20px;
+  align-items: center;
 
   padding: 20px;
+
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
 
   /* background: #dd4321; */
   /* background: #faece9; */
