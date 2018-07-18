@@ -1,0 +1,14 @@
+.header-logo a {
+  color: #fff;
+}
+
+.header-logo svg {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.header-logo span {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+}

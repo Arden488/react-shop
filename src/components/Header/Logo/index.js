@@ -1,5 +1,8 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import feather from 'feather-icons';
+
+import './styles.css';
 
 class Logo extends Component {
   componentDidMount() {
@@ -8,8 +11,11 @@ class Logo extends Component {
 
   render() {
     return (
-      <div>
-        <i data-feather="zap" />
+      <div className="header-logo">
+        <Link to="/">
+          <i data-feather="zap" />
+          <span>ZapShop</span>
+        </Link>
       </div>
     );
   }
