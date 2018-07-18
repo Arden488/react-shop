@@ -2,11 +2,17 @@
   display: grid;
   grid-auto-flow: column;
   grid-column-gap: 10px;
+  align-items: center;
+  margin-top: -3px; /* capital letters compensation */
   padding-right: 100px
 }
 
 .header-navigation__item {
   font-size: 14px;
   text-decoration: none;
-  color: #000;
+  color: #fff;
+}
+
+.header-navigation__item_active {
+  text-decoration: underline;
 }
