@@ -18,6 +18,8 @@ import CatalogCategory from './components/CatalogCategory';
 import CatalogDetail from './components/CatalogDetail';
 import Login from './components/Login';
 import Register from './components/Register';
+import Profile from './components/Profile';
+import FullCart from './components/FullCart';
 import NotFound from './components/NotFound';
 import News from './components/News';
 import NewsDetail from './components/NewsDetail';
@@ -40,6 +42,8 @@ ReactDOM.render(
             <Route path="/news" component={News} />
             <Route path="/login" component={Login} />
             <Route path="/registration" component={Register} />
+            <Route path="/profile" component={Profile} />
+            <Route path="/cart" component={FullCart} />
             <Route path="/payment-and-delivery" component={PaymentAndDelivery} />
             <Route component={NotFound} />
           </Switch>
