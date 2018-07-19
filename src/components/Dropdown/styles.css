@@ -1,0 +1,21 @@
+.dropdown {
+  position: relative;
+}
+
+.dropdown__trigger button {
+  /* display: block; */
+  cursor: pointer;
+}
+
+.dropdown__menu {
+  position: absolute;
+  top: 100%;
+  min-width: 100%;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.dropdown__menu_active {
+  opacity: 1;
+  visibility: visible;
+}

@@ -1,0 +1,16 @@
+.dropdown-menu {
+  background: #fff;
+  box-shadow: 0 1px 10px 0 rgba(0, 0, 0, .1);
+  text-align: initial;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 2px 4px;
+  text-decoration: none;
+  /* color: #000; */
+}
+
+.dropdown-menu a:hover {
+  background-color: rgba(0, 0, 0, .1);
+}
