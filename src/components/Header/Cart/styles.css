@@ -1,3 +1,17 @@
+.header-cart {
+  text-align: right;
+}
+
+.header-cart a {
+  color: #fff;
+}
+
+.header-cart span {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 10px;
+}
+
 .header-cart svg {
   display: inline-block;
   vertical-align: middle;

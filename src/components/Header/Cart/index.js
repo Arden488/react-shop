@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import feather from 'feather-icons';
 
 import './styles.css';
@@ -11,7 +12,10 @@ class Cart extends Component {
   render() {
     return (
       <div className="header-cart">
-        <i data-feather="shopping-cart" />
+        <Link to="/cart">
+          <i data-feather="shopping-cart" />
+          <span>0 руб.</span>
+        </Link>
       </div>
     );
   }
