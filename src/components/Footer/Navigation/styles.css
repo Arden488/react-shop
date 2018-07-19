@@ -10,3 +10,7 @@
   font-size: 13px;
   text-decoration: none;
 }
+
+.footer-navigation__item_active {
+  text-decoration: underline;
+}
