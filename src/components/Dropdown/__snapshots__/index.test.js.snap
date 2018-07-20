@@ -1,0 +1,50 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`matches snapshot 1`] = `
+<div
+  className="dropdown"
+>
+  <div
+    className="dropdown__trigger"
+    onClick={[Function]}
+  >
+    <button />
+  </div>
+</div>
+`;
+
+exports[`matches snapshot with content 1`] = `
+<div
+  className="dropdown"
+>
+  <div
+    className="dropdown__trigger"
+    onClick={[Function]}
+  >
+    <button />
+  </div>
+  <div
+    className="dropdown__content"
+  >
+    <DropdownContent />
+  </div>
+</div>
+`;
+
+exports[`matches snapshot with menu 1`] = `
+<div
+  className="dropdown"
+>
+  <div
+    className="dropdown__trigger"
+    onClick={[Function]}
+  >
+    <button />
+  </div>
+  <div
+    className="dropdown__menu"
+  >
+    <DropdownMenu />
+  </div>
+</div>
+`;

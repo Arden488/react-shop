@@ -7,7 +7,8 @@
   cursor: pointer;
 }
 
-.dropdown__menu {
+.dropdown__menu,
+.dropdown__content {
   position: absolute;
   top: 100%;
   min-width: 100%;
@@ -15,7 +16,8 @@
   visibility: hidden;
 }
 
-.dropdown__menu_active {
+.dropdown__menu_active,
+.dropdown__content_active {
   opacity: 1;
   visibility: visible;
 }
