@@ -16,11 +16,11 @@ it('renders without crashing', () => {
   expect(component.exists()).toEqual(true);
 });
 
-it('should have login link', () => {
-  expect(component.find(Link).at(0).prop('to')).toEqual('/login');
+it('should have profile link', () => {
+  expect(component.find(Link).at(0).prop('to')).toEqual('/profile');
 });
 
 
-it('should have register link', () => {
-  expect(component.find(Link).at(1).prop('to')).toEqual('/registration');
+it('should have signout link', () => {
+  expect(component.find(Link).at(1).prop('to')).toEqual('/signout');
 });
