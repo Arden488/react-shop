@@ -5,6 +5,10 @@ body {
   font-family: 'Open Sans', sans-serif;
 }
 
+button {
+  font-family: 'Open Sans', sans-serif;
+}
+
 .page-wrapper {
   display: grid;
   grid-template-rows: auto 1fr auto;
