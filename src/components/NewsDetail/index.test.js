@@ -1,7 +1,6 @@
-/* global it, expect, beforeEach */
+/* global it, expect, shallow, beforeEach */
 
 import React from 'react';
-import { shallow } from 'enzyme';
 
 import NewsDetail from './index';
 
@@ -11,12 +10,8 @@ beforeEach(() => {
   component = shallow(<NewsDetail match={{ params: { code: 'test' } }} />);
 });
 
-it('renders without crashing', () => {
-  expect(component.exists()).toEqual(true);
-});
-
-it('should have Back link', () => {
-  expect(component.find('button').children().text()).toEqual('Назад');
+it('renders correctly', () => {
+  expect(component).toMatchSnapshot();
 });
 
 // it('should call history.goBack when clicked', () => {

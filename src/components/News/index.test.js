@@ -1,10 +1,8 @@
-/* global it, expect, beforeEach */
+/* global it, expect, shallow, beforeEach */
 
 import React from 'react';
-import { shallow } from 'enzyme';
 
 import News from './index';
-import NewsList from '../NewsList';
 
 let component = null;
 
@@ -12,10 +10,6 @@ beforeEach(() => {
   component = shallow(<News />);
 });
 
-it('renders without crashing', () => {
-  expect(component.exists()).toEqual(true);
-});
-
-it('shoud have NewsList', () => {
-  expect(component.find(NewsList).length).toEqual(1);
+it('renders correctly', () => {
+  expect(component).toMatchSnapshot();
 });

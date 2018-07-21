@@ -1,21 +1,16 @@
-/* global it, expect, beforeEach */
+/* global it, expect, mount, beforeEach */
 
 import React from 'react';
-import { shallow } from 'enzyme';
+import { MemoryRouter as Router } from 'react-router-dom';
 
-import { Link } from 'react-router-dom';
 import Navigation from './index';
 
 let component = null;
 
 beforeEach(() => {
-  component = shallow(<Navigation />);
+  component = mount(<Router><Navigation /></Router>).find('Navigation nav');
 });
 
-it('renders without crashing', () => {
-  expect(component.exists()).toEqual(true);
-});
-
-it('should have Links', () => {
-  expect(component.find(Link).length).toBeGreaterThan(1);
+it('renders correctly', () => {
+  expect(component).toMatchSnapshot();
 });

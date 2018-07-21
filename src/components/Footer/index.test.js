@@ -1,11 +1,8 @@
-/* global it, expect, beforeEach */
+/* global it, expect, shallow, beforeEach */
 
 import React from 'react';
-import { shallow } from 'enzyme';
 
 import Footer from './index';
-import Contacts from './Contacts';
-import Navigation from './Navigation';
 
 let component = null;
 
@@ -13,14 +10,6 @@ beforeEach(() => {
   component = shallow(<Footer />);
 });
 
-it('renders without crashing', () => {
-  expect(component.exists()).toEqual(true);
-});
-
-it('should contain Contacts', () => {
-  expect(component.find(Contacts).length).toEqual(1);
-});
-
-it('should contain Navigation', () => {
-  expect(component.find(Navigation).length).toEqual(1);
+it('renders correctly', () => {
+  expect(component).toMatchSnapshot();
 });

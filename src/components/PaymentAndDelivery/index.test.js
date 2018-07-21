@@ -1,7 +1,6 @@
-/* global it, expect, beforeEach */
+/* global it, expect, shallow, beforeEach */
 
 import React from 'react';
-import { shallow } from 'enzyme';
 
 import PaymentAndDelivery from './index';
 
@@ -11,6 +10,6 @@ beforeEach(() => {
   component = shallow(<PaymentAndDelivery />);
 });
 
-it('renders without crashing', () => {
-  expect(component.exists()).toEqual(true);
+it('renders correctly', () => {
+  expect(component).toMatchSnapshot();
 });
