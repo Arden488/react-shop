@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="header-logo"
+>
+  <Link
+    replace={false}
+    to="/"
+  >
+    <i
+      data-feather="zap"
+    />
+    <span>
+      ZapShop
+    </span>
+  </Link>
+</div>
+`;

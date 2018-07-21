@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="product-item"
+>
+  <Link
+    className="product-item__link"
+    replace={false}
+    to="/product/1"
+  >
+    <div
+      className="product-item__image"
+    >
+      <img
+        alt="Apple iPhone 8 64 ГБ (PRODUCT)RED"
+        src="/img/iphone8_red.webp"
+      />
+    </div>
+    <div
+      className="product-item__title"
+    >
+      Apple iPhone 8 64 ГБ (PRODUCT)RED
+    </div>
+    <div
+      className="product-item__controls"
+    >
+      <div
+        className="product-item__price"
+      >
+        39 990 ₽
+      </div>
+      <div
+        className="product-item__buy"
+      >
+        <button>
+          Купить
+        </button>
+      </div>
+    </div>
+  </Link>
+</div>
+`;

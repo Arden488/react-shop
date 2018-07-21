@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div>
+  <NewsListItem
+    code="1"
+    title="1"
+  />
+  <NewsListItem
+    code="2"
+    title="2"
+  />
+  <NewsListItem
+    code="3"
+    title="3"
+  />
+  <NewsListItem
+    code="4"
+    title="4"
+  />
+  <NewsListItem
+    code="5"
+    title="5"
+  />
+</div>
+`;

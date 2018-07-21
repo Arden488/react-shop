@@ -1,0 +1,120 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<nav
+  className="footer-navigation"
+>
+  <Link
+    className="footer-navigation__item footer-navigation__item_active"
+    key="/"
+    replace={false}
+    to="/"
+  >
+    <a
+      className="footer-navigation__item footer-navigation__item_active"
+      href="/"
+      onClick={[Function]}
+    >
+      Home
+    </a>
+  </Link>
+  <Link
+    className="footer-navigation__item"
+    key="/catalog"
+    replace={false}
+    to="/catalog"
+  >
+    <a
+      className="footer-navigation__item"
+      href="/catalog"
+      onClick={[Function]}
+    >
+      Catalog
+    </a>
+  </Link>
+  <Link
+    className="footer-navigation__item"
+    key="/catalog/iphone"
+    replace={false}
+    to="/catalog/iphone"
+  >
+    <a
+      className="footer-navigation__item"
+      href="/catalog/iphone"
+      onClick={[Function]}
+    >
+      iPhone
+    </a>
+  </Link>
+  <Link
+    className="footer-navigation__item"
+    key="/catalog/ipad"
+    replace={false}
+    to="/catalog/ipad"
+  >
+    <a
+      className="footer-navigation__item"
+      href="/catalog/ipad"
+      onClick={[Function]}
+    >
+      iPad
+    </a>
+  </Link>
+  <Link
+    className="footer-navigation__item"
+    key="/catalog/mac"
+    replace={false}
+    to="/catalog/mac"
+  >
+    <a
+      className="footer-navigation__item"
+      href="/catalog/mac"
+      onClick={[Function]}
+    >
+      Mac
+    </a>
+  </Link>
+  <Link
+    className="footer-navigation__item"
+    key="/catalog/accessories"
+    replace={false}
+    to="/catalog/accessories"
+  >
+    <a
+      className="footer-navigation__item"
+      href="/catalog/accessories"
+      onClick={[Function]}
+    >
+      Accessories
+    </a>
+  </Link>
+  <Link
+    className="footer-navigation__item"
+    key="/news"
+    replace={false}
+    to="/news"
+  >
+    <a
+      className="footer-navigation__item"
+      href="/news"
+      onClick={[Function]}
+    >
+      News and events
+    </a>
+  </Link>
+  <Link
+    className="footer-navigation__item"
+    key="/payment-and-delivery"
+    replace={false}
+    to="/payment-and-delivery"
+  >
+    <a
+      className="footer-navigation__item"
+      href="/payment-and-delivery"
+      onClick={[Function]}
+    >
+      Delivery and payment
+    </a>
+  </Link>
+</nav>
+`;

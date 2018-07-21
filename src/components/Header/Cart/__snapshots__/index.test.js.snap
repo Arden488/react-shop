@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<div
+  className="header-cart"
+>
+  <Dropdown>
+    <button>
+      <i
+        data-feather="shopping-cart"
+      />
+      <span>
+        0 руб.
+      </span>
+    </button>
+    <DropdownContent>
+      <p>
+        ...
+      </p>
+      <Link
+        replace={false}
+        to="/cart"
+      >
+        Proceed to checkout
+      </Link>
+    </DropdownContent>
+  </Dropdown>
+</div>
+`;
