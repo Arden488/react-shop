@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "enzyme-adapter-react-16": "^1.1.1",
     "enzyme": "^3.3.0",
     "feather-icons": "^4.7.3",
     "history": "^4.7.2",
@@ -24,10 +25,10 @@
   "jest": {
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
-    ]
+    ],
+    "coverageReporters": ["json", "html"]
   },
   "devDependencies": {
-    "enzyme-adapter-react-16": "^1.1.1",
     "enzyme-to-json": "^3.3.4",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
