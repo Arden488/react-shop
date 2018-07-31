@@ -1,11 +1,11 @@
 /* global it, expect, shallow, beforeEach */
 
-import React from 'react';
+import * as React from 'react';
+import { shallow } from 'enzyme';
 
 import CatalogCategory from './index';
-import CatalogElementList from '../CatalogElementList';
 
-let component = null;
+let component: React.ReactNode = null;
 
 beforeEach(() => {
   component = shallow(<CatalogCategory match={{ params: { cat: 'test' } }} />);
