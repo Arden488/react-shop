@@ -1,29 +1,29 @@
 /* global document */
 
-import React from 'react';
-import ReactDOM from 'react-dom';
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
-import { createStore } from 'redux';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { createStore } from 'redux';
 
 import rootReducer from './reducers';
 
 import './styles.css';
 
-import Header from './components/Header';
-import Footer from './components/Footer';
-import Home from './components/Home';
-import CatalogRoot from './components/CatalogRoot';
 import CatalogCategory from './components/CatalogCategory';
 import CatalogDetail from './components/CatalogDetail';
-import Login from './components/Login';
-import Register from './components/Register';
-import Profile from './components/Profile';
+import CatalogRoot from './components/CatalogRoot';
+import Footer from './components/Footer';
 import FullCart from './components/FullCart';
-import NotFound from './components/NotFound';
+import Header from './components/Header';
+import Home from './components/Home';
+import Login from './components/Login';
 import News from './components/News';
 import NewsDetail from './components/NewsDetail';
+import NotFound from './components/NotFound';
 import PaymentAndDelivery from './components/PaymentAndDelivery';
+import Profile from './components/Profile';
+import Register from './components/Register';
 
 const store = createStore(rootReducer);
 
@@ -34,7 +34,7 @@ ReactDOM.render(
         <Header />
         <main className="page-main">
           <Switch>
-            <Route exact path="/" component={Home} />
+            <Route exact={true} path="/" component={Home} />
             <Route path="/catalog/:cat" component={CatalogCategory} />
             <Route path="/catalog" component={CatalogRoot} />
             <Route path="/product/:code" component={CatalogDetail} />

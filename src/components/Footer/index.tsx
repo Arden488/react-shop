@@ -1,4 +1,4 @@
-import React from 'react';
+import * as React from 'react';
 
 import Contacts from './Contacts';
 import Navigation from './Navigation';

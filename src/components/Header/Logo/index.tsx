@@ -1,15 +1,15 @@
-import React, { Component } from 'react';
+import * as feather from 'feather-icons';
+import * as React from 'react';
 import { Link } from 'react-router-dom';
-import feather from 'feather-icons';
 
 import './styles.css';
 
-class Logo extends Component {
-  componentDidMount() {
+class Logo extends React.Component {
+  public componentDidMount() {
     feather.replace();
   }
 
-  render() {
+  public render() {
     return (
       <div className="header-logo">
         <Link to="/">

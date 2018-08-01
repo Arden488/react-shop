@@ -1,9 +1,9 @@
-import React from 'react';
+import * as React from 'react';
 
 import Navigation from '../Header/Navigation';
-import Logo from './Logo';
-import Cart from './Cart';
 import Auth from './Auth';
+import Cart from './Cart';
+import Logo from './Logo';
 
 import './styles.css';
 

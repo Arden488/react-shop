@@ -1,17 +1,17 @@
-import React, { Component } from 'react';
+import * as feather from 'feather-icons';
+import * as React from 'react';
 import { Link } from 'react-router-dom';
-import feather from 'feather-icons';
 import Dropdown from '../../Dropdown';
 import DropdownMenu from '../../Dropdown/DropdownMenu';
 
 import './styles.css';
 
-class Auth extends Component {
-  componentDidMount() {
+class Auth extends React.Component {
+  public componentDidMount() {
     feather.replace();
   }
 
-  render() {
+  public render() {
     return (
       <div className="header-auth">
         <Dropdown>

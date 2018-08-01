@@ -1,10 +1,9 @@
-/* global it, expect, shallow, beforeEach */
-
-import React from 'react';
+import { shallow } from 'enzyme';
+import * as React from 'react';
 
 import Contacts from './index';
 
-let component = null;
+let component: React.ReactNode = null;
 
 beforeEach(() => {
   component = shallow(<Contacts />);

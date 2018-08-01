@@ -1,10 +1,13 @@
-import React from 'react';
+import * as React from 'react';
 import { Link } from 'react-router-dom';
-import PropTypes from 'prop-types';
 
 import './styles.css';
 
-const CatalogElementListItem = props => (
+interface ICatalogElementListItemProps {
+  code: string,
+}
+
+const CatalogElementListItem: React.SFC<ICatalogElementListItemProps> = props => (
   <div className="product-item">
     <Link className="product-item__link" to={`/product/${props.code}`}>
       <div className="product-item__image"><img src="/img/iphone8_red.webp" alt="Apple iPhone 8 64 ГБ (PRODUCT)RED" /></div>
@@ -18,10 +21,5 @@ const CatalogElementListItem = props => (
     </Link>
   </div>
 );
-
-CatalogElementListItem.propTypes = {
-  code: PropTypes.string.isRequired,
-  // title: PropTypes.string.isRequired,
-};
 
 export default CatalogElementListItem;

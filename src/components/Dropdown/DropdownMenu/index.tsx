@@ -1,9 +1,9 @@
-import React, { Component } from 'react';
+import * as React from 'react';
 
 import './styles.css';
 
-class DropdownMenu extends Component {
-  render() {
+class DropdownMenu extends React.Component {
+  public render() {
     return (
       <div className="dropdown-menu">
         {this.props.children}

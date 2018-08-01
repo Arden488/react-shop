@@ -1,17 +1,23 @@
-import React from 'react';
+import * as React from 'react';
 
 import CatalogElementListItem from '../CatalogElementListItem';
 
 import './styles.css';
 
-const CatalogElementList = () => (
-  <div className="product-list">
-    <CatalogElementListItem code="1" title="Товар 1" />
-    <CatalogElementListItem code="2" title="Товар 2" />
-    <CatalogElementListItem code="3" title="Товар 3" />
-    <CatalogElementListItem code="4" title="Товар 4" />
-    <CatalogElementListItem code="5" title="Товар 5" />
-  </div>
-);
+class CatalogElementList extends React.Component<any, any> {
+  public render() {
+    const items = [1, 2, 3, 4, 5].map(item => this.renderListItem(item));
+
+    return (
+      <div className="product-list">
+        {items}
+      </div>
+    );
+  }
+  
+  private renderListItem(item: React.ReactNode) {
+    return <CatalogElementListItem code="1" />;
+  }
+}
 
 export default CatalogElementList;

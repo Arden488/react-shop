@@ -1,9 +1,9 @@
-/* global it, expect, shallow, beforeEach */
+import { shallow } from 'enzyme';
+import * as React from 'react';
 
-import React from 'react';
 import FeaturedProducts from './index';
 
-let component = null;
+let component: React.ReactNode = null;
 
 beforeEach(() => {
   component = shallow(<FeaturedProducts />);

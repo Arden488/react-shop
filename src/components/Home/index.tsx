@@ -1,9 +1,9 @@
-import React from 'react';
+import * as React from 'react';
 
-import Slider from '../Slider';
-import HotProducts from '../HotProducts';
-import FeaturedProducts from '../FeaturedProducts';
 import DiscountedProducts from '../DiscountedProducts';
+import FeaturedProducts from '../FeaturedProducts';
+import HotProducts from '../HotProducts';
+import Slider from '../Slider';
 
 import './styles.css';
 

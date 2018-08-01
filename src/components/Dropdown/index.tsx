@@ -1,15 +1,26 @@
 /* global document */
 
-import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import * as React from 'react';
 
-import DropdownMenu from './DropdownMenu';
 import DropdownContent from './DropdownContent';
+import DropdownMenu from './DropdownMenu';
 
 import './styles.css';
 
-class Dropdown extends Component {
-  constructor(props) {
+// tslint:disable-next-line
+interface Dropdown {
+  wrapperRef: any,
+  triggerContent: any[],
+  content: React.ReactChild,
+  menu: React.ReactChild,
+}
+
+interface IDropdownState {
+  openDropdownMenu: boolean,
+}
+
+class Dropdown extends React.Component<any, IDropdownState> {
+  constructor(props: any) {
     super(props);
 
     this.triggerContent = [];
@@ -29,67 +40,7 @@ class Dropdown extends Component {
     this.renderContent = this.renderContent.bind(this);
   }
 
-  componentDidMount() {
-    document.addEventListener('mousedown', this.handleClickOutside);
-  }
-
-  componentWillUnmount() {
-    document.removeEventListener('mousedown', this.handleClickOutside);
-  }
-
-  setWrapperRef(node) {
-    this.wrapperRef = node;
-  }
-
-  prefilterChildren(children) {
-    React.Children.forEach(children, (child) => {
-      if (child.type === DropdownMenu) {
-        this.menu = child;
-      } else if (child.type === DropdownContent) {
-        this.content = child;
-      } else {
-        this.triggerContent.push(child);
-      }
-    });
-  }
-
-  handleClickOutside(event) {
-    if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
-      this.setState({
-        openDropdownMenu: false,
-      });
-    }
-  }
-
-  handleTriggerClick() {
-    this.setState({
-      openDropdownMenu: true,
-    });
-  }
-
-  renderMenu() {
-    let menuClasses = 'dropdown__menu';
-    if (this.state.openDropdownMenu) menuClasses += ' dropdown__menu_active';
-
-    return (
-      <div className={menuClasses}>
-        {this.menu}
-      </div>
-    );
-  }
-
-  renderContent() {
-    let contentClasses = 'dropdown__content';
-    if (this.state.openDropdownMenu) contentClasses += ' dropdown__content_active';
-
-    return (
-      <div className={contentClasses}>
-        {this.content}
-      </div>
-    );
-  }
-
-  render() {
+  public render() {
     return (
       <div className="dropdown" ref={this.setWrapperRef}>
         <div className="dropdown__trigger" onClick={this.handleTriggerClick}>
@@ -100,10 +51,66 @@ class Dropdown extends Component {
       </div>
     );
   }
-}
 
-Dropdown.propTypes = {
-  children: PropTypes.oneOfType([PropTypes.object, PropTypes.array]).isRequired,
-};
+  public componentDidMount() {
+    document.addEventListener('mousedown', this.handleClickOutside);
+  }
+
+  public componentWillUnmount() {
+    document.removeEventListener('mousedown', this.handleClickOutside);
+  }
+
+  public handleTriggerClick() {
+    this.setState({
+      openDropdownMenu: true,
+    });
+  }
+
+  private setWrapperRef(node: any) {
+    this.wrapperRef = node;
+  }
+
+  private prefilterChildren(children: React.ReactNode) {
+    React.Children.forEach(children, (child: React.ReactElement<any> ) => {
+      if (child.type === DropdownMenu) {
+        this.menu = child;
+      } else if (child.type === DropdownContent) {
+        this.content = child;
+      } else {
+        this.triggerContent.push(child);
+      }
+    });
+  }
+
+  private handleClickOutside(event: { target: any }) {
+    if (this.wrapperRef && !this.wrapperRef.contains(event.target)) {
+      this.setState({
+        openDropdownMenu: false,
+      });
+    }
+  }
+
+  private renderMenu() {
+    let menuClasses = 'dropdown__menu';
+    if (this.state.openDropdownMenu) { menuClasses += ' dropdown__menu_active'; }
+
+    return (
+      <div className={menuClasses}>
+        {this.menu}
+      </div>
+    );
+  }
+
+  private renderContent() {
+    let contentClasses = 'dropdown__content';
+    if (this.state.openDropdownMenu) { contentClasses += ' dropdown__content_active'; }
+
+    return (
+      <div className={contentClasses}>
+        {this.content}
+      </div>
+    );
+  }
+}
 
 export default Dropdown;

@@ -1,15 +1,14 @@
-/* global it, expect, shallow, beforeEach */
+import { shallow } from 'enzyme';
+import * as React from 'react';
 
-import React from 'react';
-
-import Dropdown from './index';
-import DropdownMenu from './DropdownMenu';
 import DropdownContent from './DropdownContent';
+import DropdownMenu from './DropdownMenu';
+import Dropdown from './index';
 
-let component = null;
+let component: any = null;
 
 beforeEach(() => {
-  component = shallow(<Dropdown><button></button></Dropdown>);
+  component = shallow(<Dropdown><button /></Dropdown>);
 });
 
 it('matches snapshot', () => {
@@ -17,12 +16,12 @@ it('matches snapshot', () => {
 });
 
 it('matches snapshot with menu', () => {
-  component = shallow(<Dropdown><button></button><DropdownMenu></DropdownMenu></Dropdown>);
+  component = shallow(<Dropdown><button /><DropdownMenu /></Dropdown>);
   expect(component).toMatchSnapshot();
 });
 
 it('matches snapshot with content', () => {
-  component = shallow(<Dropdown><button></button><DropdownContent></DropdownContent></Dropdown>);
+  component = shallow(<Dropdown><button /><DropdownContent /></Dropdown>);
   expect(component).toMatchSnapshot();
 });
 
@@ -36,7 +35,7 @@ it('should have openDropdownMenu state', () => {
 
 it('should have trigger that handle click events and change state', () => {
   const spy = jest.spyOn(Dropdown.prototype, 'handleTriggerClick');
-  component = shallow(<Dropdown><button></button></Dropdown>);
+  component = shallow(<Dropdown><button /></Dropdown>);
 
   expect(component.state('openDropdownMenu')).toBeFalsy();
 

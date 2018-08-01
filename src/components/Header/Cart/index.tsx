@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
+import * as feather from 'feather-icons';
+import * as React from 'react';
 import { Link } from 'react-router-dom';
-import feather from 'feather-icons';
 
 import Dropdown from '../../Dropdown';
 import DropdownContent from '../../Dropdown/DropdownContent';
 
 import './styles.css';
 
-class Cart extends Component {
-  componentDidMount() {
+class Cart extends React.Component {
+  public componentDidMount() {
     feather.replace();
   }
 
-  render() {
+  public render() {
     return (
       <div className="header-cart">
         <Dropdown>
