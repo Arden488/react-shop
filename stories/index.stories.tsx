@@ -8,6 +8,7 @@ import { action } from '@storybook/addon-actions';
 import Dropdown from '../src/components/Dropdown/index.tsx';
 import DropdownContent from '../src/components/Dropdown/DropdownContent/index.tsx';
 import DropdownMenu from '../src/components/Dropdown/DropdownMenu/index.tsx';
+import CatalogElementListItem from '../src/components/CatalogElementListItem/index.tsx';
 
 storiesOf('Dropdown', module)
   .add('with custom content', () => (
@@ -31,3 +32,10 @@ storiesOf('Dropdown', module)
       </Dropdown>
     </div>
   ));
+
+storiesOf('Catalog Element List Item', module)
+  .add('default', () => (
+    <div>
+      <CatalogElementListItem code="1" />
+    </div>
+  ))
