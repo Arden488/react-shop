@@ -2,8 +2,8 @@
 
 import * as React from 'react';
 
-import DropdownContent from './DropdownContent/index.tsx';
-import DropdownMenu from './DropdownMenu/index.tsx';
+import DropdownContent from './DropdownContent/';
+import DropdownMenu from './DropdownMenu/';
 
 import './styles.css';
 
