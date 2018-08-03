@@ -1,15 +1,14 @@
 import * as React from 'react';
 
-import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
+import { storiesOf } from '@storybook/react';
 import { MemoryRouter } from 'react-router-dom';
 // import { linkTo } from '@storybook/addon-links';
 
-// import { Button, Welcome } from '@storybook/react/demo';
-import Dropdown from '../src/components/Dropdown/index.tsx';
-import DropdownContent from '../src/components/Dropdown/DropdownContent/index.tsx';
-import DropdownMenu from '../src/components/Dropdown/DropdownMenu/index.tsx';
-import CatalogElementListItem from '../src/components/CatalogElementListItem/index.tsx';
+import CatalogElementListItem from '../src/components/CatalogElementListItem';
+import Dropdown from '../src/components/Dropdown';
+import DropdownContent from '../src/components/Dropdown/DropdownContent';
+import DropdownMenu from '../src/components/Dropdown/DropdownMenu';
 
 storiesOf('Dropdown', module)
   .add('with custom content', () => (
