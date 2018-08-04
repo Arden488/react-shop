@@ -6,23 +6,23 @@ exports[`renders correctly 1`] = `
 >
   <CatalogElementListItem
     code="1"
-    title="Товар 1"
+    key="1"
   />
   <CatalogElementListItem
-    code="2"
-    title="Товар 2"
+    code="1"
+    key="2"
   />
   <CatalogElementListItem
-    code="3"
-    title="Товар 3"
+    code="1"
+    key="3"
   />
   <CatalogElementListItem
-    code="4"
-    title="Товар 4"
+    code="1"
+    key="4"
   />
   <CatalogElementListItem
-    code="5"
-    title="Товар 5"
+    code="1"
+    key="5"
   />
 </div>
 `;
