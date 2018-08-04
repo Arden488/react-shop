@@ -62,7 +62,7 @@ class Dropdown extends React.Component<any, IDropdownState> {
 
   public handleTriggerClick() {
     this.setState({
-      openDropdownMenu: true,
+      openDropdownMenu: !this.state.openDropdownMenu,
     });
   }
 
