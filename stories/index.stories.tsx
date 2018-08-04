@@ -39,6 +39,6 @@ storiesOf('Catalog Element List Item', module)
   ))
   .add('default', () => (
     <div>
-      <CatalogElementListItem code="1" />
+      <CatalogElementListItem code="1" key={1} />
     </div>
   ))

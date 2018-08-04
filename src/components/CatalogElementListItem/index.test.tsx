@@ -6,7 +6,7 @@ import CatalogElementListItem from './index';
 let component: React.ReactNode = null;
 
 beforeEach(() => {
-  component = shallow(<CatalogElementListItem code="1" />);
+  component = shallow(<CatalogElementListItem code="1" key={1} />);
 });
 
 it('renders correctly', () => {

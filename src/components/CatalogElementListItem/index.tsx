@@ -5,6 +5,7 @@ import './styles.css';
 
 interface ICatalogElementListItemProps {
   code: string,
+  key: number,
 }
 
 const CatalogElementListItem: React.SFC<ICatalogElementListItemProps> = props => (
