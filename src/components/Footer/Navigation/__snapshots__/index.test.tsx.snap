@@ -20,20 +20,6 @@ exports[`renders correctly 1`] = `
   </Link>
   <Link
     className="footer-navigation__item"
-    key="/catalog"
-    replace={false}
-    to="/catalog"
-  >
-    <a
-      className="footer-navigation__item"
-      href="/catalog"
-      onClick={[Function]}
-    >
-      Catalog
-    </a>
-  </Link>
-  <Link
-    className="footer-navigation__item"
     key="/catalog/iphone"
     replace={false}
     to="/catalog/iphone"
