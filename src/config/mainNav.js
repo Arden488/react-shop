@@ -4,10 +4,6 @@ const mainNavItems = [
     title: 'Home',
   },
   {
-    path: '/catalog',
-    title: 'Catalog',
-  },
-  {
     path: '/catalog/iphone',
     title: 'iPhone',
   },
