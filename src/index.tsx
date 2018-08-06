@@ -12,7 +12,6 @@ import './styles.css';
 
 import CatalogCategory from './components/CatalogCategory';
 import CatalogDetail from './components/CatalogDetail';
-import CatalogRoot from './components/CatalogRoot';
 import Footer from './components/Footer';
 import FullCart from './components/FullCart';
 import Header from './components/Header';
@@ -36,7 +35,6 @@ ReactDOM.render(
           <Switch>
             <Route exact={true} path="/" component={Home} />
             <Route path="/catalog/:cat" component={CatalogCategory} />
-            <Route path="/catalog" component={CatalogRoot} />
             <Route path="/product/:code" component={CatalogDetail} />
             <Route path="/news/:code" component={NewsDetail} />
             <Route path="/news" component={News} />
