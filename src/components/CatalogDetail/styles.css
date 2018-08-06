@@ -1,0 +1,8 @@
+.catalog-detail__content {
+  display: grid;
+  grid-template-columns: 500px auto;
+}
+
+.catalog-detail__additional {
+  margin: 20px 0;
+}
