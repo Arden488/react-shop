@@ -2,12 +2,43 @@
 
 exports[`renders correctly 1`] = `
 <div>
-  <button
-    onClick={[Function]}
+  <div
+    className="catalog-detail"
   >
-    Назад
-  </button>
-  <h1 />
-  ...
+    <div
+      className="catalog-detail__content"
+    >
+      <div
+        className="catalog-detail__gallery"
+      >
+        <ProductGallery />
+      </div>
+      <div
+        className="catalog-detail__info"
+      >
+        <h1 />
+        <p>
+          Some description
+        </p>
+        <div>
+          <p>
+            Choose options:
+          </p>
+          <ColorPicker />
+          <SizePicker />
+        </div>
+        <ProductPrice />
+        <ProductDetailControls />
+        <DeliveryPicker />
+      </div>
+    </div>
+    <div
+      className="catalog-detail__additional"
+    >
+      <Tabs />
+      Tabs - detailed description / characteristics
+    </div>
+    <FeaturedProducts />
+  </div>
 </div>
 `;
