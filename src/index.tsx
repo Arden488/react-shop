@@ -23,6 +23,7 @@ import NotFound from './components/NotFound';
 import PaymentAndDelivery from './components/PaymentAndDelivery';
 import Profile from './components/Profile';
 import Register from './components/Register';
+import Slider from './components/Slider';
 
 const store = createStore(rootReducer);
 
@@ -31,6 +32,7 @@ ReactDOM.render(
     <Router>
       <div className="page-wrapper">
         <Header />
+        <Route exact={true} path="/" component={Slider} />
         <main className="page-main">
           <Switch>
             <Route exact={true} path="/" component={Home} />
