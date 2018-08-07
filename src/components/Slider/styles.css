@@ -1,0 +1,19 @@
+.main-slider {
+  max-width: 100%;
+  height: 600px;
+  text-align: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.main-slider__item {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.main-slider__item_active {
+  display: block;
+}
