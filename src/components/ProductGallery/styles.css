@@ -1,0 +1,16 @@
+.product-gallery {
+  width: 500px;
+  height: 500px;
+  position: relative;
+}
+
+.product-gallery__item {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.product-gallery__item_active {
+  display: block;
+}
