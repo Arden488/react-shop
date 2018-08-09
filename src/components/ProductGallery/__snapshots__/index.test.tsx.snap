@@ -1,7 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div>
-  ProductGallery
+<div
+  className="product-gallery"
+>
+  <img
+    alt=""
+    className="product-gallery__item product-gallery__item_active"
+    src="/img/iphone1.webp"
+  />
+  <img
+    alt=""
+    className="product-gallery__item"
+    src="/img/iphone2.webp"
+  />
+  <img
+    alt=""
+    className="product-gallery__item"
+    src="/img/iphone3.webp"
+  />
+  <img
+    alt=""
+    className="product-gallery__item"
+    src="/img/iphone4.webp"
+  />
 </div>
 `;

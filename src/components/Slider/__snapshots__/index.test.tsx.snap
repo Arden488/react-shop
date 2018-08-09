@@ -1,7 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div>
-  Slider
+<div
+  className="main-slider"
+>
+  <img
+    alt=""
+    className="main-slider__item main-slider__item_active"
+    src="img/slide3.jpg"
+  />
+  <img
+    alt=""
+    className="main-slider__item"
+    src="img/slide2.jpg"
+  />
+  <img
+    alt=""
+    className="main-slider__item"
+    src="img/slide1.jpg"
+  />
 </div>
 `;

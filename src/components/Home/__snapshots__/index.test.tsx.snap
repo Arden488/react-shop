@@ -2,7 +2,6 @@
 
 exports[`renders correctly 1`] = `
 <div>
-  <Slider />
   <h2>
     Top sale:
   </h2>
