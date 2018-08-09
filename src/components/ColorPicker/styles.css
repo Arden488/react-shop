@@ -1,0 +1,39 @@
+.color-picker {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-column-gap: 20px;
+}
+
+.color-picker__item {
+  border: 1px solid #666;
+  border-radius: 4px;
+  min-height: 80px;
+  text-align: center;
+}
+
+.color-picker__color {
+  width: 20px;
+  height: 20px;
+  display: block;
+  margin: 0 auto 10px;
+  border-radius: 50%;
+  background-color: #000;
+}
+
+.color-picker__color_gray {
+  background-color: rgb(80, 80, 80);
+}
+
+.color-picker__item_selected {
+  border-color: #ff9900;
+}
+
+.color-picker__label {
+  font-size: 16px;
+  display: block;
+  margin: auto;
+}
+
+.color-picker__input {
+  display: none;
+}
