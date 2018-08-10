@@ -3,7 +3,7 @@ import * as React from 'react';
 import './styles.css';
 
 import ColorPicker from '../ColorPicker';
-import DeliveryPicker from '../DeliveryPicker';
+import DeliveryOptions from '../DeliveryOptions';
 import FeaturedProducts from '../FeaturedProducts';
 import ProductDetailControls from '../ProductDetailControls';
 import ProductGallery from '../ProductGallery';
@@ -28,12 +28,22 @@ const CatalogDetail: React.SFC<ICatalogDetailProps> = props => (
 
           <div>
             <p>Choose options:</p>
-            <ColorPicker />
-            <SizePicker />
+            <div className="catalog-detail__opt-section">
+              <ColorPicker />
+            </div>
+            <div className="catalog-detail__opt-section">
+              <SizePicker />
+            </div>
           </div>
-          <ProductPrice />
-          <ProductDetailControls />
-          <DeliveryPicker />
+          <div className="catalog-detail__opt-section">
+            <ProductPrice />
+          </div>
+          <div className="catalog-detail__opt-section">
+            <ProductDetailControls />
+          </div>
+          <div className="catalog-detail__opt-section">
+            <DeliveryOptions />
+          </div>
         </div>
       </div>
       <div className="catalog-detail__additional">
