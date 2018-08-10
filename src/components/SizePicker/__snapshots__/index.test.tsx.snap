@@ -1,7 +1,83 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div>
-  SizePicker
+<div
+  className="size-picker"
+>
+  <button
+    className="size-picker__item size-picker__item_selected"
+    type="button"
+  >
+    <span
+      className="size-picker__label"
+    >
+      16 Gb
+    </span>
+    <input
+      className="size-picker__input"
+      name=""
+      type="checkbox"
+    />
+  </button>
+  <button
+    className="size-picker__item"
+    type="button"
+  >
+    <span
+      className="size-picker__label"
+    >
+      32 Gb
+    </span>
+    <input
+      className="size-picker__input"
+      name=""
+      type="checkbox"
+    />
+  </button>
+  <button
+    className="size-picker__item"
+    type="button"
+  >
+    <span
+      className="size-picker__label"
+    >
+      128 Gb
+    </span>
+    <input
+      className="size-picker__input"
+      name=""
+      type="checkbox"
+    />
+  </button>
+  <button
+    className="size-picker__item"
+    type="button"
+  >
+    <span
+      className="size-picker__label"
+    >
+      256 Gb
+    </span>
+    <input
+      className="size-picker__input"
+      name=""
+      type="checkbox"
+    />
+  </button>
+  <button
+    className="size-picker__item"
+    type="button"
+  >
+    <span
+      className="size-picker__label"
+    >
+      512 Gb
+    </span>
+    <input
+      className="size-picker__input"
+      name=""
+      type="checkbox"
+    />
+  </button>
 </div>
 `;

@@ -24,12 +24,32 @@ exports[`renders correctly 1`] = `
           <p>
             Choose options:
           </p>
-          <ColorPicker />
-          <SizePicker />
+          <div
+            className="catalog-detail__opt-section"
+          >
+            <ColorPicker />
+          </div>
+          <div
+            className="catalog-detail__opt-section"
+          >
+            <SizePicker />
+          </div>
         </div>
-        <ProductPrice />
-        <ProductDetailControls />
-        <DeliveryPicker />
+        <div
+          className="catalog-detail__opt-section"
+        >
+          <ProductPrice />
+        </div>
+        <div
+          className="catalog-detail__opt-section"
+        >
+          <ProductDetailControls />
+        </div>
+        <div
+          className="catalog-detail__opt-section"
+        >
+          <DeliveryOptions />
+        </div>
       </div>
     </div>
     <div

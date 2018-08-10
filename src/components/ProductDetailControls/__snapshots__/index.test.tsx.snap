@@ -1,7 +1,13 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div>
-  ProductDetailControls
+<div
+  className="product-controls"
+>
+  <button
+    className="b-btn"
+  >
+    Add to cart
+  </button>
 </div>
 `;
