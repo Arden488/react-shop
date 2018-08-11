@@ -9,6 +9,7 @@ import ProductDetailControls from '../ProductDetailControls';
 import ProductGallery from '../ProductGallery';
 import ProductPrice from '../ProductPrice';
 import SizePicker from '../SizePicker';
+import Tab from '../Tab';
 import Tabs from '../Tabs';
 
 interface ICatalogDetailProps {
@@ -47,8 +48,10 @@ const CatalogDetail: React.SFC<ICatalogDetailProps> = props => (
         </div>
       </div>
       <div className="catalog-detail__additional">
-        <Tabs />
-        Tabs - detailed description / characteristics
+        <Tabs>
+          <Tab label="Description">Description</Tab>
+          <Tab label="Characteristics">Characteristics</Tab>
+        </Tabs>
       </div>
       <FeaturedProducts />
     </div>
