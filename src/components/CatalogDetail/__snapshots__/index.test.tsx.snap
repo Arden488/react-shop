@@ -55,8 +55,18 @@ exports[`renders correctly 1`] = `
     <div
       className="catalog-detail__additional"
     >
-      <Tabs />
-      Tabs - detailed description / characteristics
+      <Tabs>
+        <Tab
+          label="Description"
+        >
+          Description
+        </Tab>
+        <Tab
+          label="Characteristics"
+        >
+          Characteristics
+        </Tab>
+      </Tabs>
     </div>
     <FeaturedProducts />
   </div>
