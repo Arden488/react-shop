@@ -53,7 +53,7 @@ const CatalogDetail: React.SFC<ICatalogDetailProps> = props => (
           <Tab label="Characteristics">Characteristics</Tab>
         </Tabs>
       </div>
-      <FeaturedProducts />
+      <FeaturedProducts items={[1, 2, 3]} />
     </div>
   </div>
 );
