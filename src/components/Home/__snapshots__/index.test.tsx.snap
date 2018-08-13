@@ -9,7 +9,15 @@ exports[`renders correctly 1`] = `
   <h2>
     Featured
   </h2>
-  <FeaturedProducts />
+  <FeaturedProducts
+    items={
+      Array [
+        1,
+        2,
+        3,
+      ]
+    }
+  />
   <h2>
     Best discounts:
   </h2>
