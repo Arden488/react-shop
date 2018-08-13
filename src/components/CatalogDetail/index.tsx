@@ -50,7 +50,39 @@ const CatalogDetail: React.SFC<ICatalogDetailProps> = props => (
       <div className="catalog-detail__additional">
         <Tabs>
           <Tab label="Description">Description</Tab>
-          <Tab label="Characteristics">Characteristics</Tab>
+          <Tab label="Characteristics">
+            <table className="b-table">
+              <tbody>
+                <tr>
+                  <th colSpan={2}>Main specs</th>
+                </tr>
+                <tr>
+                  <td>Capacity</td>
+                  <td>256 Gb</td>
+                </tr>
+                <tr>
+                  <td>Color</td>
+                  <td>Space gray</td>
+                </tr>
+                <tr>
+                  <td>Size and weight</td>
+                  <td>
+                    Height: 5.65 inches (143.6 mm)<br />
+                    Width: 2.79 inches (70.9 mm)<br />
+                    Depth: 0.30 inch (7.7 mm)<br />
+                    Weight: 6.14 ounces (174 grams)
+                  </td>
+                </tr>
+                <tr>
+                  <th colSpan={2}>Other</th>
+                </tr>
+                <tr>
+                  <td>Splash, Water, and Dust Resistant</td>
+                  <td>Rated IP67 under IEC standard 60529</td>
+                </tr>
+              </tbody>
+            </table>
+          </Tab>
         </Tabs>
       </div>
       <FeaturedProducts items={[1, 2, 3]} />
