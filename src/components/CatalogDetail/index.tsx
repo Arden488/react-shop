@@ -50,7 +50,7 @@ const CatalogDetail: React.SFC<ICatalogDetailProps> = props => (
       <div className="catalog-detail__additional">
         <Tabs>
           <Tab label="Description">Description</Tab>
-          <Tab label="Characteristics">
+          <Tab label="Characteristics" active={true}>
             <table className="b-table">
               <tbody>
                 <tr>
