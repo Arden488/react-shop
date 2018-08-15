@@ -1,0 +1,38 @@
+.full-cart-item {
+  display: grid;
+  grid-template-columns: 200px auto 300px;
+  grid-column-gap: 20px;
+  border-bottom: 1px solid #e6e6e6;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+}
+
+.full-cart-item__image {
+  max-width: 100%;
+}
+
+.full-cart-item__controls {
+  display: grid;
+  grid-template-columns: 150px 100px 50px;
+}
+
+.full-cart__summ {
+  padding: 20px 0;
+  max-width: 400px;
+  text-align: center;
+  margin: auto;
+}
+
+.full-cart__summ-value {
+  font-weight: bold;
+  margin-left: 30px;
+  font-size: 24px;
+}
+
+.full-cart__proceed {
+  display: block;
+  padding: 10px;
+  max-width: 400px;
+  width: 100%;
+  margin: auto;
+}
