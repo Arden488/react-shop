@@ -1,7 +1,20 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div>
-  FeaturedProducts
+<div
+  className="product-list product-list_featured"
+>
+  <CatalogElementListItem
+    code="1"
+    key="1"
+  />
+  <CatalogElementListItem
+    code="1"
+    key="2"
+  />
+  <CatalogElementListItem
+    code="1"
+    key="3"
+  />
 </div>
 `;
