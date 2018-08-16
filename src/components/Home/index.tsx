@@ -15,7 +15,7 @@ const Home = () => (
     <FeaturedProducts items={[1, 2, 3]} />
 
     <h2>Best discounts:</h2>
-    <DiscountedProducts />
+    <DiscountedProducts items={[1, 2, 3]} />
   </div>
 );
 
