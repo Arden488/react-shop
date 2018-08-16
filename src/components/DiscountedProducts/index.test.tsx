@@ -6,7 +6,7 @@ import DiscountedProducts from './index';
 let component: React.ReactNode = null;
 
 beforeEach(() => {
-  component = shallow(<DiscountedProducts />);
+  component = shallow(<DiscountedProducts items={[1, 2, 3]} />);
 });
 
 it('renders correctly', () => {
