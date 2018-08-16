@@ -21,6 +21,14 @@ exports[`renders correctly 1`] = `
   <h2>
     Best discounts:
   </h2>
-  <DiscountedProducts />
+  <DiscountedProducts
+    items={
+      Array [
+        1,
+        2,
+        3,
+      ]
+    }
+  />
 </div>
 `;
