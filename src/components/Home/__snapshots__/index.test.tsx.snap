@@ -5,7 +5,15 @@ exports[`renders correctly 1`] = `
   <h2>
     Top sale:
   </h2>
-  <HotProducts />
+  <HotProducts
+    items={
+      Array [
+        1,
+        2,
+        3,
+      ]
+    }
+  />
   <h2>
     Featured
   </h2>
