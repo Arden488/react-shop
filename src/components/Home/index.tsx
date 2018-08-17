@@ -9,7 +9,7 @@ import './styles.css';
 const Home = () => (
   <div>
     <h2>Top sale:</h2>
-    <HotProducts />
+    <HotProducts items={[1, 2, 3]} />
 
     <h2>Featured</h2>
     <FeaturedProducts items={[1, 2, 3]} />
