@@ -11,12 +11,12 @@ exports[`renders correctly 1`] = `
     <div
       className="catalog-category__aside"
     >
-      <CatalogSort />
       <CatalogFilter />
     </div>
     <div
       className="catalog-category__content"
     >
+      <CatalogSort />
       <CatalogElementList
         items={
           Array [

@@ -2,7 +2,9 @@
 
 exports[`renders correctly 1`] = `
 <div>
-  <div>
+  <div
+    className="catalog-filter__section"
+  >
     <div>
       Product series:
     </div>
@@ -37,7 +39,9 @@ exports[`renders correctly 1`] = `
       <br />
     </div>
   </div>
-  <div>
+  <div
+    className="catalog-filter__section"
+  >
     <div>
       Color:
     </div>
@@ -71,7 +75,9 @@ exports[`renders correctly 1`] = `
        Gold rose
     </div>
   </div>
-  <div>
+  <div
+    className="catalog-filter__section"
+  >
     <div>
       Price range:
     </div>
@@ -79,7 +85,9 @@ exports[`renders correctly 1`] = `
       From 0 to $1000
     </div>
   </div>
-  <div>
+  <div
+    className="catalog-filter__section"
+  >
     <div>
       Screen size:
     </div>
@@ -106,7 +114,9 @@ exports[`renders correctly 1`] = `
        6'
     </div>
   </div>
-  <div>
+  <div
+    className="catalog-filter__section"
+  >
     <div>
       Memory size:
     </div>
@@ -147,7 +157,9 @@ exports[`renders correctly 1`] = `
        256 Gb
     </div>
   </div>
-  <div>
+  <div
+    className="catalog-filter__section"
+  >
     <div>
       Release year:
     </div>
