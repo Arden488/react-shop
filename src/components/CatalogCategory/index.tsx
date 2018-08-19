@@ -15,10 +15,10 @@ const CatalogCategory: React.SFC<ICatalogCategoryProps> = props => (
     <h1>{props.match.params.cat}</h1>
     <div className="catalog-category-wrapper">
       <div className="catalog-category__aside">
-        <CatalogSort />
         <CatalogFilter />
       </div>
       <div className="catalog-category__content">
+        <CatalogSort />
         <CatalogElementList items={[1, 2, 3, 4, 5]} />
       </div>
     </div>
