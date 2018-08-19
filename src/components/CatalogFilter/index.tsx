@@ -1,8 +1,10 @@
 import * as React from 'react';
 
+import './styles.css';
+
 const CatalogFilter = () => (
   <div>
-    <div>
+    <div className="catalog-filter__section">
       <div>Product series:</div>
       <div>
         <input type="checkbox" value="" name="" /> iPhone X<br />
@@ -11,7 +13,7 @@ const CatalogFilter = () => (
         <input type="checkbox" value="" name="" /> iPhone 6<br />
       </div>
     </div>
-    <div>
+    <div className="catalog-filter__section">
       <div>Color:</div>
       <div>
         <input type="checkbox" value="" name="" /> Gray space<br />
@@ -20,11 +22,11 @@ const CatalogFilter = () => (
         <input type="checkbox" value="" name="" /> Gold rose
       </div>
     </div>
-    <div>
+    <div className="catalog-filter__section">
       <div>Price range:</div>
       <div>From 0 to $1000</div>
     </div>
-    <div>
+    <div className="catalog-filter__section">
       <div>Screen size:</div>
       <div>
         <input type="checkbox" value="" name="" /> 4'<br />
@@ -32,7 +34,7 @@ const CatalogFilter = () => (
         <input type="checkbox" value="" name="" /> 6'
       </div>
     </div>
-    <div>
+    <div className="catalog-filter__section">
       <div>Memory size:</div>
       <div>
         <input type="checkbox" value="" name="" /> 16 Gb<br />
@@ -42,7 +44,7 @@ const CatalogFilter = () => (
         <input type="checkbox" value="" name="" /> 256 Gb
       </div>
     </div>
-    <div>
+    <div className="catalog-filter__section">
       <div>Release year:</div>
       <div>
         <div>
