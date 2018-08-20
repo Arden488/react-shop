@@ -123,10 +123,13 @@ exports[`renders correctly 1`] = `
         39 990 ₽
       </span>
     </div>
-    <button
-      className="full-cart__proceed"
-    >
-      Proceed to checkout
+    <button>
+      <Link
+        replace={false}
+        to="/checkout"
+      >
+        Proceed to checkout
+      </Link>
     </button>
   </div>
 </div>
