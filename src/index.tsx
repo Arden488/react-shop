@@ -14,6 +14,7 @@ import CatalogCategory from './components/CatalogCategory';
 import CatalogDetail from './components/CatalogDetail';
 import Footer from './components/Footer';
 import FullCart from './components/FullCart';
+import FullCheckout from './components/FullCheckout';
 import Header from './components/Header';
 import Home from './components/Home';
 import Login from './components/Login';
@@ -44,6 +45,7 @@ ReactDOM.render(
             <Route path="/registration" component={Register} />
             <Route path="/profile" component={Profile} />
             <Route path="/cart" component={FullCart} />
+            <Route path="/checkout" component={FullCheckout} />
             <Route path="/payment-and-delivery" component={PaymentAndDelivery} />
             <Route component={NotFound} />
           </Switch>
