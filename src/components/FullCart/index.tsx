@@ -1,4 +1,5 @@
 import * as React from 'react';
+import { Link } from 'react-router-dom';
 
 import './styles.css';
 
@@ -45,7 +46,7 @@ const FullCart = () => (
         <span className="full-cart__summ-value">39 990 ₽</span>
       </div>
 
-      <button className="full-cart__proceed">Proceed to checkout</button>
+      <button><Link to="/checkout">Proceed to checkout</Link></button>
     </div>
   </div>
 );
