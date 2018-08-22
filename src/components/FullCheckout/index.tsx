@@ -3,7 +3,7 @@ import * as React from 'react';
 import './styles.css';
 
 const FullCheckout = () => (
-  <div>
+  <div className="full-checkout">
     <div>
       <h2>Delivery</h2>
       <h3>Type</h3>

@@ -1,0 +1,7 @@
+.full-checkout {
+  display: grid;
+  grid-template-columns: auto 300px;
+  grid-column-gap: 20px;
+}
+
+/* .full-checkout-summary {} */
