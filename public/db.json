@@ -1,0 +1,18 @@
+{
+  "products": [{
+    "id": 1,
+    "image": "iphone8_red.webp",
+    "title": "Apple iPhone 8 32 ГБ (PRODUCT)RED",
+    "price": "39990"
+  }, {
+    "id": 2,
+    "image": "iphone8_red.webp",
+    "title": "Apple iPhone 8 64 ГБ (PRODUCT)RED",
+    "price": "49990"
+  }, {
+    "id": 3,
+    "image": "iphone8_red.webp",
+    "title": "Apple iPhone 8 256 ГБ (PRODUCT)RED",
+    "price": "59990"
+  }]
+}
