@@ -26,8 +26,8 @@ class CatalogElementList extends React.Component<ICatalogElementListProps> {
     );
   }
   
-  private renderListItem(item: number) {
-    return <CatalogElementListItem code="1" key={item} />;
+  private renderListItem(item: Item) {
+    return <CatalogElementListItem code="1" key={item.id} />;
   }
 }
 

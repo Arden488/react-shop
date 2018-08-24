@@ -5,13 +5,16 @@ import CatalogFilter from '../CatalogFilter';
 import CatalogSort from '../CatalogSort';
 
 import './styles.css';
-import { render } from 'react-dom';
 
 interface ICatalogCategoryProps {
   match: any
 }
 
-class CatalogCategory extends React.Component<ICatalogCategoryProps> {
+interface ICatalogCategoryState {
+  items: [{ id: number, image: string, price: string, title: string }]
+}
+
+class CatalogCategory extends React.Component<ICatalogCategoryProps, ICatalogCategoryState> {
   constructor(props: any) {
     super(props);
 
