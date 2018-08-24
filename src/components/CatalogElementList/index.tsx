@@ -4,8 +4,15 @@ import CatalogElementListItem from '../CatalogElementListItem';
 
 import './styles.css';
 
+interface Item {
+  id: number,
+  image: string,
+  title: string,
+  price: string
+}
+
 interface ICatalogElementListProps {
-  items: number[]
+  items: [Item]
 }
 
 class CatalogElementList extends React.Component<ICatalogElementListProps> {
