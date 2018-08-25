@@ -11,7 +11,7 @@ interface ICatalogCategoryProps {
 }
 
 interface ICatalogCategoryState {
-  items: [{ id: number, image: string, price: string, title: string }]
+  items: Array<{ id: number, image: string, price: string, title: string }>
 }
 
 class CatalogCategory extends React.Component<ICatalogCategoryProps, ICatalogCategoryState> {
