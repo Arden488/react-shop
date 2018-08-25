@@ -5,7 +5,7 @@ import CatalogElementListItem from '../CatalogElementListItem';
 import './styles.css';
 
 interface IHotProductsProps {
-  items: number[]
+  items: Array<{ id: number, image: string, price: string, title: string }>
 }
 
 class HotProducts extends React.Component<IHotProductsProps> {
@@ -19,8 +19,8 @@ class HotProducts extends React.Component<IHotProductsProps> {
     );
   }
 
-  private renderListItem(item: number) {
-    return <CatalogElementListItem code="1" key={item} />;
+  private renderListItem(item: { id: number, image: string, price: string, title: string }) {
+    return <CatalogElementListItem {...item} key={item.id} />;
   }
 }
 
