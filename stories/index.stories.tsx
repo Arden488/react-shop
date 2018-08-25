@@ -37,8 +37,17 @@ storiesOf('Catalog Element List Item', module)
   .addDecorator(story => (
     <MemoryRouter initialEntries={['/']}>{story()}</MemoryRouter>
   ))
-  .add('default', () => (
-    <div>
-      <CatalogElementListItem code="1" key={1} />
-    </div>
-  ))
+  .add('default', () => {
+    const dummyItem = {
+      id: 1,
+      image: "iphone8_red.webp",
+      price: "39990",
+      title: "Apple iPhone 8 32 ГБ (PRODUCT)RED",
+    };
+
+    return (
+      <div>
+        <CatalogElementListItem {...dummyItem} key={1} />
+      </div>
+    )
+  })
