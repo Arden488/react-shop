@@ -6,7 +6,13 @@ import CatalogElementListItem from './index';
 let component: React.ReactNode = null;
 
 beforeEach(() => {
-  component = shallow(<CatalogElementListItem code="1" key={1} />);
+  const item = {
+    id: 1,
+    image: "iphone8_red.webp",
+    price: "39990",
+    title: "Apple iPhone 8 32 ГБ (PRODUCT)RED",
+  };
+  component = shallow(<CatalogElementListItem {...item} key={1} />);
 });
 
 it('renders correctly', () => {
