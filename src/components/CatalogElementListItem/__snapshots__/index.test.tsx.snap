@@ -13,14 +13,14 @@ exports[`renders correctly 1`] = `
       className="product-item__image"
     >
       <img
-        alt="Apple iPhone 8 64 ГБ (PRODUCT)RED"
+        alt="Apple iPhone 8 32 ГБ (PRODUCT)RED"
         src="/img/iphone8_red.webp"
       />
     </div>
     <div
       className="product-item__title"
     >
-      Apple iPhone 8 64 ГБ (PRODUCT)RED
+      Apple iPhone 8 32 ГБ (PRODUCT)RED
     </div>
     <div
       className="product-item__controls"
@@ -28,7 +28,8 @@ exports[`renders correctly 1`] = `
       <div
         className="product-item__price"
       >
-        39 990 ₽
+        39990
+         ₽
       </div>
       <div
         className="product-item__buy"

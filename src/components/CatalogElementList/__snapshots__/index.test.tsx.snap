@@ -5,24 +5,25 @@ exports[`renders correctly 1`] = `
   className="product-list"
 >
   <CatalogElementListItem
-    code="1"
+    id={1}
+    image="iphone8_red.webp"
     key="1"
+    price="39990"
+    title="Apple iPhone 8 32 ГБ (PRODUCT)RED"
   />
   <CatalogElementListItem
-    code="1"
+    id={2}
+    image="iphone8_red.webp"
     key="2"
+    price="49990"
+    title="Apple iPhone 8 64 ГБ (PRODUCT)RED"
   />
   <CatalogElementListItem
-    code="1"
+    id={3}
+    image="iphone8_red.webp"
     key="3"
-  />
-  <CatalogElementListItem
-    code="1"
-    key="4"
-  />
-  <CatalogElementListItem
-    code="1"
-    key="5"
+    price="59990"
+    title="Apple iPhone 8 256 ГБ (PRODUCT)RED"
   />
 </div>
 `;
