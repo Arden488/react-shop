@@ -11,12 +11,7 @@ interface ICatalogCategoryProps {
 }
 
 interface ICatalogCategoryState {
-  items: { 
-    accessories: Array<{ id: number, image: string, price: string, title: string }>,
-    iphone: Array<{ id: number, image: string, price: string, title: string }>,
-    mac: Array<{ id: number, image: string, price: string, title: string }>,
-    ipad: Array<{ id: number, image: string, price: string, title: string }>,
-  }
+  items: {}
 }
 
 class CatalogCategory extends React.Component<ICatalogCategoryProps, ICatalogCategoryState> {
@@ -24,6 +19,29 @@ class CatalogCategory extends React.Component<ICatalogCategoryProps, ICatalogCat
     super(props);
 
     this.state = {
+      items: {}
+    }
+  }
+
+  public render() {
+    return (
+      <div>
+        <h1>{this.props.match.params.cat}</h1>
+        <div className="catalog-category-wrapper">
+          <div className="catalog-category__aside">
+            <CatalogFilter />
+          </div>
+          <div className="catalog-category__content">
+            <CatalogSort />
+            <CatalogElementList items={this.state.items[this.props.match.params.cat]} />
+          </div>
+        </div>
+      </div>
+    )
+  }
+
+  public componentDidMount() {
+    this.setState({
       items: {
         accessories: [{
           id: 1,
@@ -80,24 +98,7 @@ class CatalogCategory extends React.Component<ICatalogCategoryProps, ICatalogCat
           title: "MacBook 2018",
         }],
       }
-    }
-  }
-
-  public render() {
-    return (
-      <div>
-        <h1>{this.props.match.params.cat}</h1>
-        <div className="catalog-category-wrapper">
-          <div className="catalog-category__aside">
-            <CatalogFilter />
-          </div>
-          <div className="catalog-category__content">
-            <CatalogSort />
-            <CatalogElementList items={this.state.items[this.props.match.params.cat]} />
-          </div>
-        </div>
-      </div>
-    )
+    });
   }
 }
 
