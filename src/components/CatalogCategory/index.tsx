@@ -33,7 +33,7 @@ class CatalogCategory extends React.Component<ICatalogCategoryProps, ICatalogCat
           </div>
           <div className="catalog-category__content">
             <CatalogSort />
-            <CatalogElementList items={this.state.items[this.props.match.params.cat]} />
+            <CatalogElementList items={this.state.items[this.props.match.params.cat] || []} />
           </div>
         </div>
       </div>
