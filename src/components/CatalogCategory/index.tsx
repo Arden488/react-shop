@@ -1,3 +1,4 @@
+import axios from 'axios';
 import * as React from 'react';
 
 import CatalogElementList from '../CatalogElementList';
@@ -41,64 +42,13 @@ class CatalogCategory extends React.Component<ICatalogCategoryProps, ICatalogCat
   }
 
   public componentDidMount() {
-    this.setState({
-      items: {
-        accessories: [{
-          id: 1,
-          image: "iphone8_red.webp",
-          price: "5999",
-          title: "Bag",
-        }, {
-          id: 2,
-          image: "iphone8_red.webp",
-          price: "8999",
-          title: "Case",
-        }],
-        ipad: [{
-          id: 1,
-          image: "iphone8_red.webp",
-          price: "39990",
-          title: "Apple iPad 32 ГБ",
-        }, {
-          id: 2,
-          image: "iphone8_red.webp",
-          price: "49990",
-          title: "Apple iPad 64 ГБ",
-        }, {
-          id: 3,
-          image: "iphone8_red.webp",
-          price: "59990",
-          title: "Apple iPad 128 ГБ",
-        }, {
-          id: 3,
-          image: "iphone8_red.webp",
-          price: "69990",
-          title: "Apple iPad 256 ГБ",
-        }],
-        iphone: [{
-          id: 1,
-          image: "iphone8_red.webp",
-          price: "39990",
-          title: "Apple iPhone 8 32 ГБ (PRODUCT)RED",
-        }, {
-          id: 2,
-          image: "iphone8_red.webp",
-          price: "49990",
-          title: "Apple iPhone 8 64 ГБ (PRODUCT)RED",
-        }, {
-          id: 3,
-          image: "iphone8_red.webp",
-          price: "59990",
-          title: "Apple iPhone 8 256 ГБ (PRODUCT)RED",
-        }],
-        mac: [{
-          id: 1,
-          image: "iphone8_red.webp",
-          price: "139990",
-          title: "MacBook 2018",
-        }],
-      }
-    });
+    axios
+      .get('http://localhost:3004/products')
+      .then(response => {
+        this.setState({
+          items: response.data
+        });
+      });
   }
 }
 
