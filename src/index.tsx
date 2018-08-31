@@ -4,13 +4,13 @@ import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import { createStore } from 'redux';
+import { applyMiddleware, compose, createStore } from 'redux';
+import thunk from 'redux-thunk';
 
 import rootReducer from './reducers';
 
 import './styles.css';
 
-import CatalogCategory from './components/CatalogCategory';
 import CatalogDetail from './components/CatalogDetail';
 import Footer from './components/Footer';
 import FullCart from './components/FullCart';
@@ -25,8 +25,15 @@ import PaymentAndDelivery from './components/PaymentAndDelivery';
 import Profile from './components/Profile';
 import Register from './components/Register';
 import Slider from './components/Slider';
+import CatalogCategory from './containers/CatalogCategory';
 
-const store = createStore(rootReducer);
+const store = createStore(
+  rootReducer, 
+  compose(
+    applyMiddleware(thunk),
+    (window as any).__REDUX_DEVTOOLS_EXTENSION__ && (window as any).__REDUX_DEVTOOLS_EXTENSION__(),
+  ),
+);
 
 ReactDOM.render(
   <Provider store={store}>
