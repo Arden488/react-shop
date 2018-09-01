@@ -5,7 +5,7 @@ import CatalogElementListItem from '../CatalogElementListItem';
 import './styles.css';
 
 interface ICatalogElementListProps {
-  items: Array<{ id: number, image: string, price: string, title: string }>
+  items: Array<{ id: number, article: number, image: string, price: string, title: string }>
 }
 
 class CatalogElementList extends React.Component<ICatalogElementListProps> {
@@ -19,8 +19,8 @@ class CatalogElementList extends React.Component<ICatalogElementListProps> {
     );
   }
   
-  private renderListItem(item: { id: number, image: string, price: string, title: string }) {
-    return <CatalogElementListItem {...item} key={item.id} />;
+  private renderListItem(item: { id: number, article: number, image: string, price: string, title: string }) {
+    return <CatalogElementListItem {...item} key={item.article} />;
   }
 }
 
