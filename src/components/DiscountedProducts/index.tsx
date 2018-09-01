@@ -5,7 +5,7 @@ import CatalogElementListItem from '../CatalogElementListItem';
 import './styles.css';
 
 interface IDiscountedProductsProps {
-  items: Array<{ id: number, image: string, price: string, title: string }>
+  items: Array<{ id: number, article: number, image: string, price: string, title: string }>
 }
 
 class DiscountedProducts extends React.Component<IDiscountedProductsProps> {
@@ -19,8 +19,8 @@ class DiscountedProducts extends React.Component<IDiscountedProductsProps> {
     );
   }
 
-  private renderListItem(item: { id: number, image: string, price: string, title: string }) {
-    return <CatalogElementListItem {...item} key={item.id} />;
+  private renderListItem(item: { id: number, article: number, image: string, price: string, title: string }) {
+    return <CatalogElementListItem {...item} key={item.article} />;
   }
 }
 

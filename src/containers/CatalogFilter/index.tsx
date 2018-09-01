@@ -3,9 +3,15 @@ import { connect } from 'react-redux';
 
 import './styles.css';
 
-class CatalogFilter extends React.Component<any> {
+interface ICatalogFilterProps {
+  products: any
+}
+
+class CatalogFilter extends React.Component<ICatalogFilterProps> {
   constructor(props: any) {
     super(props);
+
+    this.handlePropertyCheck = this.handlePropertyCheck.bind(this);
   }
 
   public render() {
@@ -14,10 +20,10 @@ class CatalogFilter extends React.Component<any> {
         <div className="catalog-filter__section">
           <div>Product series:</div>
           <div>
-            <input type="checkbox" value="" name="" /> iPhone X<br />
-            <input type="checkbox" value="" name="" /> iPhone 8<br />
-            <input type="checkbox" value="" name="" /> iPhone 7<br />
-            <input type="checkbox" value="" name="" /> iPhone 6<br />
+            <input type="checkbox" value="iphonex" onChange={this.handlePropertyCheck} name="" /> iPhone X<br />
+            <input type="checkbox" value="iphone8" onChange={this.handlePropertyCheck} name="" /> iPhone 8<br />
+            <input type="checkbox" value="iphone7" onChange={this.handlePropertyCheck} name="" /> iPhone 7<br />
+            <input type="checkbox" value="iphone6" onChange={this.handlePropertyCheck} name="" /> iPhone 6<br />
           </div>
         </div>
         <div className="catalog-filter__section">
@@ -66,6 +72,12 @@ class CatalogFilter extends React.Component<any> {
         </div>
       </div>
     )
+  }
+
+  private handlePropertyCheck(e: any) {
+    this.props.products.items.filter((item: any) => {
+      return item.type === e.target.value;
+    });
   }
 }
 
