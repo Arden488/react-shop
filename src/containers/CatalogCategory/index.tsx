@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 
-import { fetchProducts } from '../../actions/index';
+import { fetchProductsByCategory } from '../../actions/index';
 
 import CatalogElementList from '../../components/CatalogElementList';
 import CatalogSort from '../../components/CatalogSort';
@@ -11,26 +11,33 @@ import './styles.css';
 
 interface ICatalogCategoryProps {
   match: any,
-  fetchProducts: any,
+  fetchProductsByCategory: any,
   products: any,
+}
+
+// tslint:disable-next-line
+interface CatalogCategory {
+  category: string,
 }
 
 class CatalogCategory extends React.Component<ICatalogCategoryProps> {
   constructor(props: any) {
     super(props);
+
+    this.category = this.props.match.params.cat;
   }
 
   public render() {
     return (
       <div>
-        <h1>{this.props.match.params.cat}</h1>
+        <h1>{this.category}</h1>
         <div className="catalog-category-wrapper">
           <div className="catalog-category__aside">
             <CatalogFilter />
           </div>
           <div className="catalog-category__content">
             <CatalogSort />
-            <CatalogElementList items={this.props.products[this.props.match.params.cat] || []} />
+            <CatalogElementList items={this.props.products.items || []} />
           </div>
         </div>
       </div>
@@ -38,8 +45,12 @@ class CatalogCategory extends React.Component<ICatalogCategoryProps> {
   }
 
   public componentDidMount() {
-    this.props.fetchProducts();
+    this.props.fetchProductsByCategory(this.category);
   }
+
+  // public componentDidUpdate() {
+  //   this.props.fetchProductsByCategory(this.category);
+  // }
 }
 
 function mapStateToProps(state: any) {
@@ -50,7 +61,7 @@ function mapStateToProps(state: any) {
 
 function mapDispatchToProps(dispatch: any) {
   return {
-    fetchProducts: () => dispatch(fetchProducts()),
+    fetchProductsByCategory: (category: string) => dispatch(fetchProductsByCategory(category)),
   }
 }
 
