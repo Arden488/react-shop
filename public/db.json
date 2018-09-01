@@ -1,58 +1,76 @@
 {
-  "products": {
-    "accessories": [{
-      "id": 1,
-      "image": "iphone8_red.webp",
-      "price": "5999",
-      "title": "Bag"
-    }, {
-      "id": 2,
-      "image": "iphone8_red.webp",
-      "price": "8999",
-      "title": "Case"
-    }],
-    "ipad": [{
-      "id": 1,
-      "image": "iphone8_red.webp",
-      "price": "39990",
-      "title": "Apple iPad 32 ГБ"
-    }, {
-      "id": 2,
-      "image": "iphone8_red.webp",
-      "price": "49990",
-      "title": "Apple iPad 64 ГБ"
-    }, {
-      "id": 3,
-      "image": "iphone8_red.webp",
-      "price": "59990",
-      "title": "Apple iPad 128 ГБ"
-    }, {
-      "id": 3,
-      "image": "iphone8_red.webp",
-      "price": "69990",
-      "title": "Apple iPad 256 ГБ"
-    }],
-    "iphone": [{
-      "id": 1,
-      "image": "iphone8_red.webp",
-      "price": "39990",
-      "title": "Apple iPhone 8 32 ГБ (PRODUCT)RED"
-    }, {
-      "id": 2,
-      "image": "iphone8_red.webp",
-      "price": "49990",
-      "title": "Apple iPhone 8 64 ГБ (PRODUCT)RED"
-    }, {
-      "id": 3,
-      "image": "iphone8_red.webp",
-      "price": "59990",
-      "title": "Apple iPhone 8 256 ГБ (PRODUCT)RED"
-    }],
-    "mac": [{
-      "id": 1,
-      "image": "iphone8_red.webp",
-      "price": "139990",
-      "title": "MacBook 2018"
-    }]
-  }
+  "accessories": [{
+    "id": 1,
+    "article": 123432,
+    "type": "bag",
+    "image": "iphone8_red.webp",
+    "price": "5999",
+    "title": "Bag"
+  }, {
+    "id": 2,
+    "article": 123433,
+    "type": "case",
+    "image": "iphone8_red.webp",
+    "price": "8999",
+    "title": "Case"
+  }],
+  "ipad": [{
+    "id": 1,
+    "article": 823434,
+    "type": "ipad5",
+    "image": "iphone8_red.webp",
+    "price": "39990",
+    "title": "Apple iPad 32 ГБ"
+  }, {
+    "id": 2,
+    "article": 823435,
+    "type": "ipad5",
+    "image": "iphone8_red.webp",
+    "price": "49990",
+    "title": "Apple iPad 64 ГБ"
+  }, {
+    "id": 3,
+    "article": 823436,
+    "type": "ipad6",
+    "image": "iphone8_red.webp",
+    "price": "59990",
+    "title": "Apple iPad 128 ГБ"
+  }, {
+    "id": 4,
+    "article": 823437,
+    "type": "ipad6",
+    "image": "iphone8_red.webp",
+    "price": "69990",
+    "title": "Apple iPad 256 ГБ"
+  }],
+  "iphone": [{
+    "id": 1,
+    "article": 762013,
+    "type": "iphone8",
+    "image": "iphone8_red.webp",
+    "price": "39990",
+    "title": "Apple iPhone 8 32 ГБ (PRODUCT)RED"
+  }, {
+    "id": 2,
+    "article": 762014,
+    "type": "iphonex",
+    "image": "iphone8_red.webp",
+    "price": "49990",
+    "title": "Apple iPhone X 64 ГБ (PRODUCT)RED"
+  }, {
+    "id": 3,
+    "article": 762015,
+    "type": "iphone7",
+    "image": "iphone8_red.webp",
+    "price": "59990",
+    "title": "Apple iPhone 8 256 ГБ (PRODUCT)RED"
+  }],
+  "mac": [{
+    "id": 1,
+    "article": 939013,
+    "type": "macbook",
+    "image": "iphone8_red.webp",
+    "price": "139990",
+    "title": "MacBook 2018"
+  }]
 }
