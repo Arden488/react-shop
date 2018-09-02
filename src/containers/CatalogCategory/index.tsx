@@ -11,6 +11,7 @@ import './styles.css';
 
 interface ICatalogCategoryProps {
   match: any,
+  location: any,
   fetchProductsByCategory: any,
   products: any,
 }
@@ -48,9 +49,12 @@ class CatalogCategory extends React.Component<ICatalogCategoryProps> {
     this.props.fetchProductsByCategory(this.category);
   }
 
-  // public componentDidUpdate() {
-  //   this.props.fetchProductsByCategory(this.category);
-  // }
+  public componentDidUpdate(prevProps: any) {
+    if (this.props.location.pathname !== prevProps.location.pathname) {
+      this.category = this.props.match.params.cat;
+      this.props.fetchProductsByCategory(this.category);
+    }
+  }
 }
 
 function mapStateToProps(state: any) {
