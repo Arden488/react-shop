@@ -1,10 +1,13 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 
+import { filterProductsByType } from '../../actions';
+
 import './styles.css';
 
 interface ICatalogFilterProps {
-  products: any
+  products: any,
+  filterProductsByType: any,
 }
 
 class CatalogFilter extends React.Component<ICatalogFilterProps> {
@@ -75,9 +78,7 @@ class CatalogFilter extends React.Component<ICatalogFilterProps> {
   }
 
   private handlePropertyCheck(e: any) {
-    this.props.products.items.filter((item: any) => {
-      return item.type === e.target.value;
-    });
+    this.props.filterProductsByType(e.target.value);
   }
 }
 
@@ -87,4 +88,10 @@ function mapStateToProps(state: any) {
   }
 }
 
-export default connect(mapStateToProps)(CatalogFilter);
+function mapDispatchToProps(dispatch: any) {
+  return {
+    filterProductsByType: (type: string) => dispatch(filterProductsByType(type)),
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(CatalogFilter);
