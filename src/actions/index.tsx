@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { fetchProductsSuccess } from './types';
+import { fetchProductsSuccess, filterProductsByTypeAction } from './types';
 
 export function fetchProductsByCategory(category: string) {
   const request = axios.get(`http://localhost:3004/${category}`);
@@ -11,5 +11,14 @@ export function fetchProductsByCategory(category: string) {
         type: fetchProductsSuccess,
       })
     });
+  }
+}
+
+export function filterProductsByType(type: string) {
+  return (dispatch: any) => {
+    dispatch({
+      payload: type,
+      type: filterProductsByTypeAction,
+    })
   }
 }
