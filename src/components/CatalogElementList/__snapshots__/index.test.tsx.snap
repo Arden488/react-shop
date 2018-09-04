@@ -5,25 +5,31 @@ exports[`renders correctly 1`] = `
   className="product-list"
 >
   <CatalogElementListItem
+    article={762015}
     id={1}
     image="iphone8_red.webp"
-    key="1"
+    key="762015"
     price="39990"
     title="Apple iPhone 8 32 ГБ (PRODUCT)RED"
+    type="iphone7"
   />
   <CatalogElementListItem
+    article={762016}
     id={2}
     image="iphone8_red.webp"
-    key="2"
+    key="762016"
     price="49990"
     title="Apple iPhone 8 64 ГБ (PRODUCT)RED"
+    type="iphone8"
   />
   <CatalogElementListItem
+    article={762017}
     id={3}
     image="iphone8_red.webp"
-    key="3"
+    key="762017"
     price="59990"
     title="Apple iPhone 8 256 ГБ (PRODUCT)RED"
+    type="iphone7"
   />
 </div>
 `;
