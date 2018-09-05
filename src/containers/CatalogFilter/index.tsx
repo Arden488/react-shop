@@ -1,13 +1,13 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 
-import { filterProductsByType } from '../../actions';
+import { filterProducts } from '../../actions';
 
 import './styles.css';
 
 interface ICatalogFilterProps {
   products: any,
-  filterProductsByType: any,
+  filterProducts: any,
 }
 
 class CatalogFilter extends React.Component<ICatalogFilterProps> {
@@ -23,10 +23,30 @@ class CatalogFilter extends React.Component<ICatalogFilterProps> {
         <div className="catalog-filter__section">
           <div>Product series:</div>
           <div>
-            <input type="checkbox" value="iphonex" onChange={this.handlePropertyCheck} name="" /> iPhone X<br />
-            <input type="checkbox" value="iphone8" onChange={this.handlePropertyCheck} name="" /> iPhone 8<br />
-            <input type="checkbox" value="iphone7" onChange={this.handlePropertyCheck} name="" /> iPhone 7<br />
-            <input type="checkbox" value="iphone6" onChange={this.handlePropertyCheck} name="" /> iPhone 6<br />
+            <input 
+              type="checkbox" 
+              value="iphonex" 
+              onChange={this.handlePropertyCheck} 
+              className="products-filter-property" 
+              name="filter_type" /> iPhone X<br />
+            <input 
+              type="checkbox" 
+              value="iphone8" 
+              onChange={this.handlePropertyCheck} 
+              className="products-filter-property" 
+              name="filter_type" /> iPhone 8<br />
+            <input 
+              type="checkbox" 
+              value="iphone7" 
+              onChange={this.handlePropertyCheck} 
+              className="products-filter-property" 
+              name="filter_type" /> iPhone 7<br />
+            <input 
+              type="checkbox" 
+              value="iphone6" 
+              onChange={this.handlePropertyCheck} 
+              className="products-filter-property" 
+              name="filter_type" /> iPhone 6<br />
           </div>
         </div>
         <div className="catalog-filter__section">
@@ -77,8 +97,9 @@ class CatalogFilter extends React.Component<ICatalogFilterProps> {
     )
   }
 
-  private handlePropertyCheck(e: any) {
-    this.props.filterProductsByType(e.target.value);
+  private handlePropertyCheck() {
+    const options = { type: ['iphonex', 'iphone8'] };
+    this.props.filterProducts(options);
   }
 }
 
@@ -90,7 +111,7 @@ function mapStateToProps(state: any) {
 
 function mapDispatchToProps(dispatch: any) {
   return {
-    filterProductsByType: (type: string) => dispatch(filterProductsByType(type)),
+    filterProducts: (filterOptions: {}) => dispatch(filterProducts(filterOptions)),
   }
 }
 
