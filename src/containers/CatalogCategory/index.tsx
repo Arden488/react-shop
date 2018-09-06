@@ -17,23 +17,28 @@ interface ICatalogCategoryProps {
   filter: any,
 }
 
-// tslint:disable-next-line
-interface CatalogCategory {
-  category: string,
+interface ICatalogCategoryState {
   filteredProducts: any,
 }
 
-class CatalogCategory extends React.Component<ICatalogCategoryProps> {
+// tslint:disable-next-line
+interface CatalogCategory {
+  category: string,
+}
+
+class CatalogCategory extends React.Component<ICatalogCategoryProps, ICatalogCategoryState> {
   constructor(props: any) {
     super(props);
 
-    this.filteredProducts = [];
+    this.state = {
+      filteredProducts: []
+    }
     this.category = this.props.match.params.cat;
   }
 
   public render() {
-    const products = this.filteredProducts.length > 0 ?
-      this.filteredProducts :
+    const products = this.state.filteredProducts.length > 0 ?
+      this.state.filteredProducts :
       (this.props.products || []);
 
     return (
@@ -57,26 +62,30 @@ class CatalogCategory extends React.Component<ICatalogCategoryProps> {
   }
 
   public componentDidUpdate(prevProps: any) {
-    if (this.props.filter || this.props.filter !== {}) {
-      this.filteredProducts = this.filterProducts(this.props.products, this.props.filter);
-    }
-
     if (this.props.location.pathname !== prevProps.location.pathname) {
       this.category = this.props.match.params.cat;
       this.props.fetchProductsByCategory(this.category);
     }
   }
 
+  public componentWillReceiveProps(newProps: any) {
+    if ( newProps.filter ) {
+      this.setState({
+        filteredProducts: this.filterProducts(newProps.products, newProps.filter)
+      })
+    }
+  }
+
   private filterProducts(items: any, options: any) {
     return items.filter((item: any) => {
-      return item.type === 'iphonex';
+      return options.type.indexOf(item.type) !== -1;
     });
   }
 }
 
 function mapStateToProps(state: any) {
   return {
-    filter: state.productsFilter,
+    filter: state.productsFilterOptions,
     products: state.products,
   }
 }
