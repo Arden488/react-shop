@@ -98,7 +98,15 @@ class CatalogFilter extends React.Component<ICatalogFilterProps> {
   }
 
   private handlePropertyCheck() {
-    const options = { type: ['iphonex', 'iphone8'] };
+    const type: any = [];
+    const checks = document.querySelectorAll('.products-filter-property');
+
+    checks.forEach((el: any) => {
+      if (el.checked) {
+        type.push(el.value);
+      }
+    });
+    const options = { type };
     this.props.filterProducts(options);
   }
 }
