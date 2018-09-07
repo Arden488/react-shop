@@ -76,9 +76,19 @@ class CatalogCategory extends React.Component<ICatalogCategoryProps, ICatalogCat
     }
   }
 
-  private filterProducts(items: any, options: any) {
-    return items.filter((item: any) => {
-      return options.type.indexOf(item.type) !== -1;
+  private filterProducts(items: [], options: object) {
+    return items.filter((item: object) => {
+      let included = false;
+      
+      Object.keys(options).forEach((key: string) => {
+        const fieldName: string = key.replace('filter_', '');
+        const element = options[key];
+        if (element.indexOf(item[fieldName]) !== -1) {
+          included = true;
+        }
+      });
+      
+      return included;
     });
   }
 }
