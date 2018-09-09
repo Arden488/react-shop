@@ -82,9 +82,19 @@ class CatalogFilter extends React.Component<ICatalogFilterProps> {
           <div>Price range:</div>
           <div>
             From $
-            <input type="text" name="" value="0" size={4} /> 
+            <input 
+              type="text" 
+              name="" 
+              value="0" 
+              onChange={this.handlePropertyCheck}
+              size={4} /> 
             to $
-            <input type="text" name="" value="1000" size={4} />
+            <input 
+              type="text" 
+              name="" 
+              value="1000"
+              onChange={this.handlePropertyCheck}
+              size={4} />
           </div>
         </div>
         <div className="catalog-filter__section">
