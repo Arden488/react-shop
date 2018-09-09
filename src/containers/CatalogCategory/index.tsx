@@ -31,15 +31,13 @@ class CatalogCategory extends React.Component<ICatalogCategoryProps, ICatalogCat
     super(props);
 
     this.state = {
-      filteredProducts: []
+      filteredProducts: [],
     }
     this.category = this.props.match.params.cat;
   }
 
   public render() {
-    const products = this.state.filteredProducts.length > 0 ?
-      this.state.filteredProducts :
-      (this.props.products || []);
+    const products = this.state.filteredProducts;
 
     return (
       <div>
@@ -73,18 +71,22 @@ class CatalogCategory extends React.Component<ICatalogCategoryProps, ICatalogCat
       this.setState({
         filteredProducts: this.filterProducts(newProps.products, newProps.filter)
       })
+    } else {
+      this.setState({
+        filteredProducts: newProps.products,
+      })
     }
   }
 
   private filterProducts(items: [], options: object) {
     return items.filter((item: object) => {
-      let included = false;
+      let included = true;
       
       Object.keys(options).forEach((key: string) => {
         const fieldName: string = key.replace('filter_', '');
         const element = options[key];
-        if (element.indexOf(item[fieldName]) !== -1) {
-          included = true;
+        if (element.indexOf(item[fieldName]) === -1) {
+          included = false;
         }
       });
       
