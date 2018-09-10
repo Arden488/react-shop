@@ -10,11 +10,31 @@ interface ICatalogFilterProps {
   filterProducts: any,
 }
 
-class CatalogFilter extends React.Component<ICatalogFilterProps> {
+interface ICatalogFilterState {
+  priceFrom: string,
+  priceTo: string,
+}
+
+// tslint:disable-next-line
+interface CatalogFilter {
+  options: {
+    priceTo?: string,
+    priceFrom?: string,
+  },
+}
+
+class CatalogFilter extends React.Component<ICatalogFilterProps, ICatalogFilterState> {
   constructor(props: any) {
     super(props);
 
+    this.options = {};
+    this.handlePropertyPriceRange = this.handlePropertyPriceRange.bind(this);
     this.handlePropertyCheck = this.handlePropertyCheck.bind(this);
+
+    this.state = {
+      priceFrom: '0',
+      priceTo: '1000',
+    }
   }
 
   public render() {
@@ -84,16 +104,18 @@ class CatalogFilter extends React.Component<ICatalogFilterProps> {
             From $
             <input 
               type="text" 
-              name="" 
-              value="0" 
-              onChange={this.handlePropertyCheck}
+              className="products-filter-property products-filter-price-from"
+              name="filter_price_from" 
+              value={this.state.priceFrom} 
+              onChange={this.handlePropertyPriceRange}
               size={4} /> 
             to $
             <input 
               type="text" 
-              name="" 
-              value="1000"
-              onChange={this.handlePropertyCheck}
+              className="products-filter-property products-filter-price-to"
+              name="filter_price_to" 
+              value={this.state.priceTo}
+              onChange={this.handlePropertyPriceRange}
               size={4} />
           </div>
         </div>
@@ -198,18 +220,34 @@ class CatalogFilter extends React.Component<ICatalogFilterProps> {
   }
 
   private handlePropertyCheck() {
-    const checks = document.querySelectorAll('.products-filter-property');
-    const options = {};
+    const checks = document.querySelectorAll('input[type="checkbox"].products-filter-property');
 
     checks.forEach((el: any) => {
       if (el.checked) {
-        if ( !options[el.name] ) {
-          options[el.name] = [];
+        if ( !this.options[el.name] ) {
+          this.options[el.name] = [];
         }
-        options[el.name].push(el.value);
+        this.options[el.name].push(el.value);
       }
     });
-    this.props.filterProducts(options);
+    this.props.filterProducts(this.options);
+  }
+
+  private handlePropertyPriceRange() {
+    const from = (document.querySelector('.products-filter-price-from') as HTMLInputElement);
+    const to = (document.querySelector('.products-filter-price-to') as HTMLInputElement);
+
+    if (to && to.value !== '') {
+      this.options.priceTo = to.value;
+      this.setState({ priceTo: to.value });
+    }
+
+    if (from && from.value !== '') {
+      this.options.priceFrom = from.value;
+      this.setState({ priceFrom: from.value });
+    }
+
+    this.props.filterProducts(this.options);
   }
 }
 
