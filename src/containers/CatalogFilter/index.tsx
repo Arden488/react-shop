@@ -227,9 +227,12 @@ class CatalogFilter extends React.Component<ICatalogFilterProps, ICatalogFilterS
         if ( !this.options[el.name] ) {
           this.options[el.name] = [];
         }
-        this.options[el.name].push(el.value);
+        if ( this.options[el.name].indexOf(el.value) === -1) {
+          this.options[el.name].push(el.value);
+        }
       }
     });
+
     this.props.filterProducts(this.options);
   }
 
