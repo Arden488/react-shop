@@ -11,6 +11,7 @@ interface ICatalogFilterProps {
 }
 
 interface ICatalogFilterState {
+  filterProps: object,
   priceFrom: string,
   priceTo: string,
 }
@@ -32,6 +33,7 @@ class CatalogFilter extends React.Component<ICatalogFilterProps, ICatalogFilterS
     this.handlePropertyCheck = this.handlePropertyCheck.bind(this);
 
     this.state = {
+      filterProps: {},
       priceFrom: '0',
       priceTo: '1000',
     }
@@ -217,6 +219,27 @@ class CatalogFilter extends React.Component<ICatalogFilterProps, ICatalogFilterS
         </div>
       </div>
     )
+  }
+
+  public componentWillReceiveProps(newProps: any) {
+    this.setState({
+      filterProps: this.updateFilterProps(newProps.products),
+    });
+  }
+
+  private updateFilterProps(products: []) {
+    const names: string[] = [];
+    const excludeNames = ['id', 'article', 'title']
+
+    products.forEach((product: object) => {
+      Object.getOwnPropertyNames(product).forEach((item: any) => {
+        if (excludeNames.indexOf(item) === -1 && names.indexOf(item) === -1) {
+          names.push(item);
+        }
+      })
+    });
+
+    return names;
   }
 
   private handlePropertyCheck() {
