@@ -1,112 +1,245 @@
 {
-  "accessories": [{
-    "id": 1,
-    "article": 123432,
-    "type": "bag",
-    "color": "black",
-    "year": "2011",
-    "image": "iphone8_red.webp",
-    "price": "5999",
-    "title": "Bag"
-  }, {
-    "id": 2,
-    "article": 123433,
-    "type": "case",
-    "color": "red",
-    "year": "2012",
-    "image": "iphone8_red.webp",
-    "price": "8999",
-    "title": "Case"
-  }],
-  "ipad": [{
-    "id": 1,
-    "article": 823434,
-    "type": "ipad5",
-    "color": "black",
-    "year": "2011",
-    "screen_size": "10",
-    "memory_size": "128",
-    "image": "iphone8_red.webp",
-    "price": "39990",
-    "title": "Apple iPad 32 ГБ"
-  }, {
-    "id": 2,
-    "article": 823435,
-    "type": "ipad5",
-    "color": "gold",
-    "year": "2012",
-    "screen_size": "9",
-    "memory_size": "256",
-    "image": "iphone8_red.webp",
-    "price": "49990",
-    "title": "Apple iPad 64 ГБ"
-  }, {
-    "id": 3,
-    "article": 823436,
-    "type": "ipad6",
-    "color": "gray_space",
-    "year": "2010",
-    "screen_size": "9",
-    "memory_size": "64",
-    "image": "iphone8_red.webp",
-    "price": "59990",
-    "title": "Apple iPad 128 ГБ"
-  }, {
-    "id": 4,
-    "article": 823437,
-    "type": "ipad6",
-    "color": "black",
-    "year": "2011",
-    "screen_size": "10",
-    "memory_size": "256",
-    "image": "iphone8_red.webp",
-    "price": "69990",
-    "title": "Apple iPad 256 ГБ"
-  }],
-  "iphone": [{
-    "id": 1,
-    "article": 762013,
-    "type": "iphone8",
-    "color": "gold_rose",
-    "year": "2012",
-    "screen_size": "6",
-    "memory_size": "128",
-    "image": "iphone8_red.webp",
-    "price": "39990",
-    "title": "Apple iPhone 8 32 ГБ (PRODUCT)RED"
-  }, {
-    "id": 2,
-    "article": 762014,
-    "type": "iphonex",
-    "color": "gold",
-    "year": "2011",
-    "screen_size": "6",
-    "memory_size": "128",
-    "image": "iphone8_red.webp",
-    "price": "49990",
-    "title": "Apple iPhone X 64 ГБ (PRODUCT)RED"
-  }, {
-    "id": 3,
-    "article": 762015,
-    "type": "iphone7",
-    "color": "gray_space",
-    "year": "2010",
-    "screen_size": "5",
-    "memory_size": "128",
-    "image": "iphone8_red.webp",
-    "price": "59990",
-    "title": "Apple iPhone 8 256 ГБ (PRODUCT)RED"
-  }],
-  "mac": [{
-    "id": 1,
-    "article": 939013,
-    "type": "macbook",
-    "color": "silver",
-    "year": "2013",
-    "screen_size": "13",
-    "memory_size": "512",
-    "image": "iphone8_red.webp",
-    "price": "139990",
-    "title": "MacBook 2018"
-  }]
+  "products": {
+    "accessories": [{
+      "id": 1,
+      "article": 123432,
+      "type": "bag",
+      "color": "black",
+      "year": "2011",
+      "image": "iphone8_red.webp",
+      "price": "5999",
+      "title": "Bag"
+    }, {
+      "id": 2,
+      "article": 123433,
+      "type": "case",
+      "color": "red",
+      "year": "2012",
+      "image": "iphone8_red.webp",
+      "price": "8999",
+      "title": "Case"
+    }],
+    "ipad": [{
+      "id": 1,
+      "article": 823434,
+      "type": "ipad5",
+      "color": "black",
+      "year": "2011",
+      "screen_size": "10",
+      "memory_size": "128",
+      "image": "iphone8_red.webp",
+      "price": "39990",
+      "title": "Apple iPad 32 ГБ"
+    }, {
+      "id": 2,
+      "article": 823435,
+      "type": "ipad5",
+      "color": "gold",
+      "year": "2012",
+      "screen_size": "9",
+      "memory_size": "256",
+      "image": "iphone8_red.webp",
+      "price": "49990",
+      "title": "Apple iPad 64 ГБ"
+    }, {
+      "id": 3,
+      "article": 823436,
+      "type": "ipad6",
+      "color": "gray_space",
+      "year": "2010",
+      "screen_size": "9",
+      "memory_size": "64",
+      "image": "iphone8_red.webp",
+      "price": "59990",
+      "title": "Apple iPad 128 ГБ"
+    }, {
+      "id": 4,
+      "article": 823437,
+      "type": "ipad6",
+      "color": "black",
+      "year": "2011",
+      "screen_size": "10",
+      "memory_size": "256",
+      "image": "iphone8_red.webp",
+      "price": "69990",
+      "title": "Apple iPad 256 ГБ"
+    }],
+    "iphone": [{
+      "id": 1,
+      "article": 762013,
+      "type": "iphone8",
+      "color": "gold_rose",
+      "year": "2012",
+      "screen_size": "6",
+      "memory_size": "128",
+      "image": "iphone8_red.webp",
+      "price": "39990",
+      "title": "Apple iPhone 8 32 ГБ (PRODUCT)RED"
+    }, {
+      "id": 2,
+      "article": 762014,
+      "type": "iphonex",
+      "color": "gold",
+      "year": "2011",
+      "screen_size": "6",
+      "memory_size": "128",
+      "image": "iphone8_red.webp",
+      "price": "49990",
+      "title": "Apple iPhone X 64 ГБ (PRODUCT)RED"
+    }, {
+      "id": 3,
+      "article": 762015,
+      "type": "iphone7",
+      "color": "gray_space",
+      "year": "2010",
+      "screen_size": "5",
+      "memory_size": "128",
+      "image": "iphone8_red.webp",
+      "price": "59990",
+      "title": "Apple iPhone 8 256 ГБ (PRODUCT)RED"
+    }],
+    "mac": [{
+      "id": 1,
+      "article": 939013,
+      "type": "macbook",
+      "color": "silver",
+      "year": "2013",
+      "screen_size": "13",
+      "memory_size": "512",
+      "image": "iphone8_red.webp",
+      "price": "139990",
+      "title": "MacBook 2018"
+    }]
+  },
+  "filter": {
+    "accessories": {
+      "color": {
+        "name": "Color",
+        "field_type": "checkbox",
+        "variants": ["Red", "Green", "Blue"]
+      },
+      "price_range": {
+        "name": "Price range",
+        "field_type": "range",
+        "options": {
+          "min": "50",
+          "max": "300"
+        }
+      }
+    },
+    "ipad": {
+      "type": {
+        "name": "Product series",
+        "field_type": "checkbox",
+        "variants": ["iPad 3", "iPad 4", "iPad 5", "iPad 6"]
+      },
+      "color": {
+        "name": "Color",
+        "field_type": "checkbox",
+        "variants": ["Gold rose", "Space gray", "Onyx Black", "Silver"]
+      },
+      "price_range": {
+        "name": "Price range",
+        "field_type": "range",
+        "options": {
+          "min": "300",
+          "max": "1000"
+        }
+      },
+      "screen_size": {
+        "name": "Screen size",
+        "field_type": "checkbox",
+        "variants": ["7'", "8'", "9'", "10'"]
+      },
+      "memory_size": {
+        "name": "Memory size",
+        "field_type": "checkbox",
+        "variants": ["16Gb", "32Gb", "128Gb", "256Gb", "512Gb"]
+      },
+      "release_year": {
+        "name": "Release year",
+        "field_type": "range",
+        "options": {
+          "min": "2008",
+          "max": "2018"
+        }
+      }
+    },
+    "iphone": {
+      "type": {
+        "name": "Product series",
+        "field_type": "checkbox",
+        "variants": ["iPhone 4", "iPhone 5", "iPhone 6", "iPhone 7", "iPhone 8", "iPhone X"]
+      },
+      "color": {
+        "name": "Color",
+        "field_type": "checkbox",
+        "variants": ["Gold rose", "Space gray", "Onyx Black", "Silver"]
+      },
+      "price_range": {
+        "name": "Price range",
+        "field_type": "range",
+        "options": {
+          "min": "300",
+          "max": "1000"
+        }
+      },
+      "screen_size": {
+        "name": "Screen size",
+        "field_type": "checkbox",
+        "variants": ["4'", "5'", "5.5'"]
+      },
+      "memory_size": {
+        "name": "Memory size",
+        "field_type": "checkbox",
+        "variants": ["16Gb", "32Gb", "128Gb", "256Gb", "512Gb"]
+      },
+      "release_year": {
+        "name": "Release year",
+        "field_type": "range",
+        "options": {
+          "min": "2008",
+          "max": "2018"
+        }
+      }
+    },
+    "mac": {
+      "type": {
+        "name": "Product series",
+        "field_type": "checkbox",
+        "variants": ["MacBook Pro", "MacBook Air", "MacBook"]
+      },
+      "color": {
+        "name": "Color",
+        "field_type": "checkbox",
+        "variants": ["Gold rose", "Space gray", "Onyx Black", "Silver"]
+      },
+      "price_range": {
+        "name": "Price range",
+        "field_type": "range",
+        "options": {
+          "min": "600",
+          "max": "2000"
+        }
+      },
+      "screen_size": {
+        "name": "Screen size",
+        "field_type": "checkbox",
+        "variants": ["10'", "13'", "15'"]
+      },
+      "memory_size": {
+        "name": "Memory size",
+        "field_type": "checkbox",
+        "variants": ["512Gb", "1Tb", "2Tb", "3Tb"]
+      },
+      "release_year": {
+        "name": "Release year",
+        "field_type": "range",
+        "options": {
+          "min": "2008",
+          "max": "2018"
+        }
+      }
+    }
+  }
 }
