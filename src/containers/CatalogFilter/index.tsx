@@ -1,13 +1,14 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 
-import { filterProducts } from '../../actions';
+import { fetchFiltersByCategory, filterProducts } from '../../actions';
 
 import './styles.css';
 
 interface ICatalogFilterProps {
   products: any,
   filterProducts: any,
+  fetchFiltersByCategory: any,
 }
 
 interface ICatalogFilterState {
@@ -221,6 +222,10 @@ class CatalogFilter extends React.Component<ICatalogFilterProps, ICatalogFilterS
     )
   }
 
+  public componentDidMount() {
+    this.props.fetchFiltersByCategory('ipad');
+  }
+
   public componentWillReceiveProps(newProps: any) {
     this.setState({
       filterProps: this.updateFilterProps(newProps.products),
@@ -229,15 +234,15 @@ class CatalogFilter extends React.Component<ICatalogFilterProps, ICatalogFilterS
 
   private updateFilterProps(products: []) {
     const names: string[] = [];
-    const excludeNames = ['id', 'article', 'title']
+    // const excludeNames = ['id', 'article', 'title']
 
-    products.forEach((product: object) => {
-      Object.getOwnPropertyNames(product).forEach((item: any) => {
-        if (excludeNames.indexOf(item) === -1 && names.indexOf(item) === -1) {
-          names.push(item);
-        }
-      })
-    });
+    // products.forEach((product: object) => {
+    //   Object.getOwnPropertyNames(product).forEach((item: any) => {
+    //     if (excludeNames.indexOf(item) === -1 && names.indexOf(item) === -1) {
+    //       names.push(item);
+    //     }
+    //   })
+    // });
 
     return names;
   }
@@ -279,12 +284,14 @@ class CatalogFilter extends React.Component<ICatalogFilterProps, ICatalogFilterS
 
 function mapStateToProps(state: any) {
   return {
+    filters: state.filters,
     products: state.products,
   }
 }
 
 function mapDispatchToProps(dispatch: any) {
   return {
+    fetchFiltersByCategory: (filterCategory: string) => dispatch(fetchFiltersByCategory(filterCategory)),
     filterProducts: (filterOptions: {}) => dispatch(filterProducts(filterOptions)),
   }
 }
