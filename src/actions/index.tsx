@@ -1,13 +1,13 @@
 import axios from 'axios';
-import { fetchProductsSuccess, filterProductsAction } from './types';
+import { fetchProductsFilter, fetchProductsSuccess, filterProductsAction } from './types';
 
 export function fetchProductsByCategory(category: string) {
-  const request = axios.get(`http://localhost:3004/${category}`);
+  const request = axios.get(`http://localhost:3004/products`);
 
   return (dispatch: any) => {
     request.then((response: any) => {
       dispatch({
-        payload: response.data,
+        payload: response.data[category],
         type: fetchProductsSuccess,
       })
     });
@@ -20,5 +20,18 @@ export function filterProducts(options: {}) {
       payload: options,
       type: filterProductsAction,
     })
+  }
+}
+
+export function fetchFiltersByCategory(category: string) {
+  const request = axios.get(`http://localhost:3004/filter`)
+
+  return (dispatch: any) => {
+    request.then((response: any) => {
+      dispatch({
+        payload: response.data[category],
+        type: fetchProductsFilter,
+      })
+    });
   }
 }
