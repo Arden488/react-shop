@@ -226,27 +226,6 @@ class CatalogFilter extends React.Component<ICatalogFilterProps, ICatalogFilterS
     this.props.fetchFiltersByCategory('ipad');
   }
 
-  public componentWillReceiveProps(newProps: any) {
-    this.setState({
-      filterProps: this.updateFilterProps(newProps.products),
-    });
-  }
-
-  private updateFilterProps(products: []) {
-    const names: string[] = [];
-    // const excludeNames = ['id', 'article', 'title']
-
-    // products.forEach((product: object) => {
-    //   Object.getOwnPropertyNames(product).forEach((item: any) => {
-    //     if (excludeNames.indexOf(item) === -1 && names.indexOf(item) === -1) {
-    //       names.push(item);
-    //     }
-    //   })
-    // });
-
-    return names;
-  }
-
   private handlePropertyCheck() {
     const checks = document.querySelectorAll('input[type="checkbox"].products-filter-property');
 
