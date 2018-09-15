@@ -6,6 +6,7 @@ export default function(initialState: any, action: { type: string, payload: any 
       const productsFilterOptions = action.payload;  
 
       return {
+        ...root,
         products: root.products,
         // ...root,
         // ...initialState,

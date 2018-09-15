@@ -4,7 +4,7 @@ export default function(state = {}, action: {type: string, payload: any}, root: 
   switch (action.type) {
     case fetchProductsSuccess:
       return {
-        ...state,
+        ...root,
         products: action.payload,
       }
   }
