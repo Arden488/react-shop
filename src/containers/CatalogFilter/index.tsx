@@ -57,6 +57,7 @@ class CatalogFilter extends React.Component<ICatalogFilterProps, ICatalogFilterS
   }
 
   private getFilterFields(
+      title: string,
       name: string,
       fieldType: string, 
       variants: [] = [], 
@@ -73,16 +74,23 @@ class CatalogFilter extends React.Component<ICatalogFilterProps, ICatalogFilterS
   }
 
   private getFilterSection(filter: { 
+      title: string,
       name: string, 
       field_type: string, 
       variants: [], 
       options: { min: string, max: string } 
     }) {
-    const fields = this.getFilterFields(filter.name, filter.field_type, filter.variants, filter.options);
+    const fields = this.getFilterFields(
+      filter.title,
+      filter.name, 
+      filter.field_type, 
+      filter.variants, 
+      filter.options
+    );
 
     return (
       <div className="catalog-filter__section">
-        <div>{filter.name}:</div>
+        <div>{filter.title}:</div>
         <div>
           {fields}
         </div>
@@ -144,19 +152,12 @@ class CatalogFilter extends React.Component<ICatalogFilterProps, ICatalogFilterS
     )
   }
 
-  private handlePropertyCheck() {
-    const checks = document.querySelectorAll('input[type="checkbox"].products-filter-property');
+  private handlePropertyCheck(e: any) {
+    const check = e.target;
 
-    checks.forEach((el: any) => {
-      if (el.checked) {
-        if ( !this.options[el.name] ) {
-          this.options[el.name] = [];
-        }
-        if ( this.options[el.name].indexOf(el.value) === -1) {
-          this.options[el.name].push(el.value);
-        }
-      }
-    });
+    if (check.checked) {
+      this.options[check.name].push(check.value);
+    }
 
     this.props.filterProducts(this.options);
   }
