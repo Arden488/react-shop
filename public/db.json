@@ -22,7 +22,7 @@
     "ipad": [{
       "id": 1,
       "article": 823434,
-      "type": "ipad5",
+      "type": "iPad 5",
       "color": "black",
       "year": "2011",
       "screen_size": "10",
@@ -33,7 +33,7 @@
     }, {
       "id": 2,
       "article": 823435,
-      "type": "ipad5",
+      "type": "iPad 5",
       "color": "gold",
       "year": "2012",
       "screen_size": "9",
@@ -44,7 +44,7 @@
     }, {
       "id": 3,
       "article": 823436,
-      "type": "ipad6",
+      "type": "iPad 6",
       "color": "gray_space",
       "year": "2010",
       "screen_size": "9",
@@ -55,7 +55,7 @@
     }, {
       "id": 4,
       "article": 823437,
-      "type": "ipad6",
+      "type": "iPad 6",
       "color": "black",
       "year": "2011",
       "screen_size": "10",
@@ -67,7 +67,7 @@
     "iphone": [{
       "id": 1,
       "article": 762013,
-      "type": "iphone8",
+      "type": "iPhone 8",
       "color": "gold_rose",
       "year": "2012",
       "screen_size": "6",
@@ -78,7 +78,7 @@
     }, {
       "id": 2,
       "article": 762014,
-      "type": "iphonex",
+      "type": "iPhone X",
       "color": "gold",
       "year": "2011",
       "screen_size": "6",
@@ -89,7 +89,7 @@
     }, {
       "id": 3,
       "article": 762015,
-      "type": "iphone7",
+      "type": "iPhone 7",
       "color": "gray_space",
       "year": "2010",
       "screen_size": "5",
@@ -101,7 +101,7 @@
     "mac": [{
       "id": 1,
       "article": 939013,
-      "type": "macbook",
+      "type": "MacBook Pro",
       "color": "silver",
       "year": "2013",
       "screen_size": "13",
@@ -114,12 +114,14 @@
   "filter": {
     "accessories": {
       "color": {
-        "name": "Color",
+        "title": "Color",
+        "name": "color",
         "field_type": "checkbox",
         "variants": ["Red", "Green", "Blue"]
       },
       "price_range": {
-        "name": "Price range",
+        "title": "Price range",
+        "name": "price",
         "field_type": "range",
         "options": {
           "min": "50",
@@ -129,17 +131,20 @@
     },
     "ipad": {
       "type": {
-        "name": "Product series",
+        "title": "Product series",
+        "name": "type",
         "field_type": "checkbox",
         "variants": ["iPad 3", "iPad 4", "iPad 5", "iPad 6"]
       },
       "color": {
-        "name": "Color",
+        "title": "Color",
+        "name": "color",
         "field_type": "checkbox",
         "variants": ["Gold rose", "Space gray", "Onyx Black", "Silver"]
       },
       "price_range": {
-        "name": "Price range",
+        "title": "Price range",
+        "name": "type",
         "field_type": "range",
         "options": {
           "min": "300",
@@ -147,17 +152,20 @@
         }
       },
       "screen_size": {
-        "name": "Screen size",
+        "title": "Screen size",
+        "name": "screen_size",
         "field_type": "checkbox",
         "variants": ["7'", "8'", "9'", "10'"]
       },
       "memory_size": {
-        "name": "Memory size",
+        "title": "Memory size",
+        "name": "memory_size",
         "field_type": "checkbox",
         "variants": ["16Gb", "32Gb", "128Gb", "256Gb", "512Gb"]
       },
       "release_year": {
-        "name": "Release year",
+        "title": "Release year",
+        "name": "year",
         "field_type": "range",
         "options": {
           "min": "2008",
@@ -167,17 +175,20 @@
     },
     "iphone": {
       "type": {
-        "name": "Product series",
+        "title": "Product series",
+        "name": "type",
         "field_type": "checkbox",
         "variants": ["iPhone 4", "iPhone 5", "iPhone 6", "iPhone 7", "iPhone 8", "iPhone X"]
       },
       "color": {
-        "name": "Color",
+        "title": "Color",
+        "name": "color",
         "field_type": "checkbox",
         "variants": ["Gold rose", "Space gray", "Onyx Black", "Silver"]
       },
       "price_range": {
-        "name": "Price range",
+        "name": "price",
+        "title": "Price range",
         "field_type": "range",
         "options": {
           "min": "300",
@@ -185,17 +196,20 @@
         }
       },
       "screen_size": {
-        "name": "Screen size",
+        "title": "Screen size",
+        "name": "screen_size",
         "field_type": "checkbox",
         "variants": ["4'", "5'", "5.5'"]
       },
       "memory_size": {
-        "name": "Memory size",
+        "title": "Memory size",
+        "name": "memory_size",
         "field_type": "checkbox",
         "variants": ["16Gb", "32Gb", "128Gb", "256Gb", "512Gb"]
       },
       "release_year": {
         "name": "Release year",
+        "name": "year",
         "field_type": "range",
         "options": {
           "min": "2008",
@@ -205,17 +219,20 @@
     },
     "mac": {
       "type": {
-        "name": "Product series",
+        "title": "Product series",
+        "name": "type",
         "field_type": "checkbox",
         "variants": ["MacBook Pro", "MacBook Air", "MacBook"]
       },
       "color": {
-        "name": "Color",
+        "title": "Color",
+        "name": "color",
         "field_type": "checkbox",
         "variants": ["Gold rose", "Space gray", "Onyx Black", "Silver"]
       },
       "price_range": {
-        "name": "Price range",
+        "title": "Price range",
+        "name": "price",
         "field_type": "range",
         "options": {
           "min": "600",
@@ -223,17 +240,20 @@
         }
       },
       "screen_size": {
-        "name": "Screen size",
+        "title": "Screen size",
+        "name": "screen_size",
         "field_type": "checkbox",
         "variants": ["10'", "13'", "15'"]
       },
       "memory_size": {
-        "name": "Memory size",
+        "title": "Memory size",
+        "name": "memory_size",
         "field_type": "checkbox",
         "variants": ["512Gb", "1Tb", "2Tb", "3Tb"]
       },
       "release_year": {
-        "name": "Release year",
+        "title": "Release year",
+        "name": "year",
         "field_type": "range",
         "options": {
           "min": "2008",
