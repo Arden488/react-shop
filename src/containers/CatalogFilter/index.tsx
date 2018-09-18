@@ -156,7 +156,16 @@ class CatalogFilter extends React.Component<ICatalogFilterProps, ICatalogFilterS
     const check = e.target;
 
     if (check.checked) {
+      if ( !this.options[check.name] ) {
+        this.options[check.name] = [];
+      }
+
       this.options[check.name].push(check.value);
+    } else {
+      if ( this.options[check.name] ) {
+        const i = this.options[check.name].indexOf(check.value);
+        this.options[check.name].splice(i);
+      }
     }
 
     this.props.filterProducts(this.options);
