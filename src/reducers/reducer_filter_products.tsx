@@ -1,18 +1,13 @@
-import { filterProductsAction } from '../actions/types';
+import { passFiltersSuccess } from '../actions/types';
 
-export default function(initialState: any, action: { type: string, payload: any }, root: any) {
+export default function(state = {}, action: { type: string, payload: any }) {
   switch (action.type) {
-    case filterProductsAction:
-      const productsFilterOptions = action.payload;  
-
+    case passFiltersSuccess:
       return {
-        ...root,
-        products: root.products,
-        // ...root,
-        // ...initialState,
-        productsFilterOptions,
+        ...state,
+        data: action.payload,
       }
   }
 
-  return {};
+  return state;
 }

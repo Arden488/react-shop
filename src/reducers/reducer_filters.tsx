@@ -1,13 +1,13 @@
 import { fetchProductsFilter } from '../actions/types';
 
-export default function(state = {}, action: {type: string, payload: any}, root: any) {
+export default function(state = {}, action: {type: string, payload: any}) {
   switch(action.type) {
     case fetchProductsFilter:
       return {
         ...state,
-        filters: action.payload,
+        data: action.payload,
       }
   }
 
-  return {}
+  return state;
 }
