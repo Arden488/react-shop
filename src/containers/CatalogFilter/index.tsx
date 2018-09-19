@@ -1,14 +1,14 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
 
-import { fetchFiltersByCategory, filterProducts } from '../../actions';
+import { fetchFiltersByCategory, passFilters } from '../../actions';
 
 import './styles.css';
 
 interface ICatalogFilterProps {
   products: any,
   filters: any,
-  filterProducts: any,
+  passFilters: any,
   fetchFiltersByCategory: any,
 }
 
@@ -89,7 +89,7 @@ class CatalogFilter extends React.Component<ICatalogFilterProps, ICatalogFilterS
     );
 
     return (
-      <div className="catalog-filter__section">
+      <div className="catalog-filter__section" key={filter.name}>
         <div>{filter.title}:</div>
         <div>
           {fields}
@@ -154,21 +154,24 @@ class CatalogFilter extends React.Component<ICatalogFilterProps, ICatalogFilterS
 
   private handlePropertyCheck(e: any) {
     const check = e.target;
+    const opts = Object.assign({}, this.options);
 
     if (check.checked) {
-      if ( !this.options[check.name] ) {
-        this.options[check.name] = [];
+      if ( !opts[check.name] ) {
+        opts[check.name] = [];
       }
 
-      this.options[check.name].push(check.value);
+      opts[check.name].push(check.value);
     } else {
-      if ( this.options[check.name] ) {
-        const i = this.options[check.name].indexOf(check.value);
-        this.options[check.name].splice(i);
+      if ( opts[check.name] ) {
+        const i = opts[check.name].indexOf(check.value);
+        opts[check.name].splice(i, 1);
       }
     }
 
-    this.props.filterProducts(this.options);
+    this.options = opts;
+
+    this.props.passFilters(opts);
   }
 
   private handlePropertyPriceRange() {
@@ -185,21 +188,21 @@ class CatalogFilter extends React.Component<ICatalogFilterProps, ICatalogFilterS
       this.setState({ priceFrom: from.value });
     }
 
-    this.props.filterProducts(this.options);
+    this.props.passFilters(this.options);
   }
 }
 
 function mapStateToProps(state: any) {
   return {
-    filters: state.filters,
-    products: state.products,
+    filters: state.filters.data,
+    // ...state.products,
   }
 }
 
 function mapDispatchToProps(dispatch: any) {
   return {
     fetchFiltersByCategory: (filterCategory: string) => dispatch(fetchFiltersByCategory(filterCategory)),
-    filterProducts: (filterOptions: {}) => dispatch(filterProducts(filterOptions)),
+    passFilters: (filterOptions: {}) => dispatch(passFilters(filterOptions)),
   }
 }
 
