@@ -28,58 +28,13 @@ interface CatalogCategory {
 }
 
 class CatalogCategory extends React.PureComponent<ICatalogCategoryProps, ICatalogCategoryState> {
-  // public static getDerivedStateFromProps(props: ICatalogCategoryProps, state: ICatalogCategoryState ) {
-    // if ( props.filter && props.filter !== state.filters ) {
-    //   const filteredProducts = props.products.filter((item: object) => {
-    //     let included = true;
-        
-    //     Object.keys(props.filter).forEach((key: string) => {
-    //       const fieldName: string = key.replace('filter_', '');
-    //       const element = props.filter[key];
-    //       if (element.length > 0 && element.indexOf(item[fieldName]) === -1) {
-    //         included = false;
-    //       }
-    //     });
-        
-    //     return included;
-    //   });
-
-    //   return {
-    //     filters: props.filter,
-    //     products: filteredProducts,
-    //   };
-    // }
-
-  //   console.log(props.filter);
-  //   console.log(state.filters);
-
-  //   if (props.filter) {
-  //     return {
-  //       filters: props.filter,
-  //     };
-  //   }
-
-  //   if (props.products) {
-  //     return {
-  //       products: props.products,
-  //     };
-  //   }
-
-  //   return null;
-  // }
-
   constructor(props: any) {
     super(props);
 
-    // this.state = {
-    //   filters: {},
-    //   products: [],
-    // }
     this.category = this.props.match.params.cat;
   }
 
   public render() {
-    console.log(this.props.filters);
     const products = this.filterProducts(this.props.products || [], this.props.filters || {});
 
     return (
