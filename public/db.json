@@ -144,7 +144,7 @@
       },
       "price_range": {
         "title": "Price range",
-        "name": "type",
+        "name": "price",
         "field_type": "range",
         "options": {
           "min": "300",
