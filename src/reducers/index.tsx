@@ -1,13 +1,13 @@
-// import { combineReducers } from 'redux';
+import { combineReducers } from 'redux';
 
-import ProductsFilter from './reducer_filter_products';
-import Filters from './reducer_filters';
+import ProductsFilterReducer from './reducer_filter_products';
+import FiltersReducer from './reducer_filters';
 import ProductsReducer from './reducer_products';
 
-export default (state = {}, action: any) => {
-  return {
-    ...ProductsReducer({}, action, state),
-    ...ProductsFilter({}, action, state),
-    ...Filters({}, action, state),
-  }
-};
+const rootReducer = combineReducers({
+  filters: FiltersReducer,
+  products: ProductsReducer,
+  productsFilterOptions: ProductsFilterReducer,
+});
+
+export default rootReducer;
