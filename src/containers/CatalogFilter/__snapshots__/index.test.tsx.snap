@@ -1,211 +1,100 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div>
-  <div
-    className="catalog-filter__section"
-  >
-    <div>
-      Product series:
-    </div>
-    <div>
-      <input
-        name=""
-        type="checkbox"
-        value=""
-      />
-       iPhone X
-      <br />
-      <input
-        name=""
-        type="checkbox"
-        value=""
-      />
-       iPhone 8
-      <br />
-      <input
-        name=""
-        type="checkbox"
-        value=""
-      />
-       iPhone 7
-      <br />
-      <input
-        name=""
-        type="checkbox"
-        value=""
-      />
-       iPhone 6
-      <br />
-    </div>
-  </div>
-  <div
-    className="catalog-filter__section"
-  >
-    <div>
-      Color:
-    </div>
-    <div>
-      <input
-        name=""
-        type="checkbox"
-        value=""
-      />
-       Gray space
-      <br />
-      <input
-        name=""
-        type="checkbox"
-        value=""
-      />
-       Black
-      <br />
-      <input
-        name=""
-        type="checkbox"
-        value=""
-      />
-       Gold
-      <br />
-      <input
-        name=""
-        type="checkbox"
-        value=""
-      />
-       Gold rose
-    </div>
-  </div>
-  <div
-    className="catalog-filter__section"
-  >
-    <div>
-      Price range:
-    </div>
-    <div>
-      From 0 to $1000
-    </div>
-  </div>
-  <div
-    className="catalog-filter__section"
-  >
-    <div>
-      Screen size:
-    </div>
-    <div>
-      <input
-        name=""
-        type="checkbox"
-        value=""
-      />
-       4'
-      <br />
-      <input
-        name=""
-        type="checkbox"
-        value=""
-      />
-       5'
-      <br />
-      <input
-        name=""
-        type="checkbox"
-        value=""
-      />
-       6'
-    </div>
-  </div>
-  <div
-    className="catalog-filter__section"
-  >
-    <div>
-      Memory size:
-    </div>
-    <div>
-      <input
-        name=""
-        type="checkbox"
-        value=""
-      />
-       16 Gb
-      <br />
-      <input
-        name=""
-        type="checkbox"
-        value=""
-      />
-       32 Gb
-      <br />
-      <input
-        name=""
-        type="checkbox"
-        value=""
-      />
-       64 Gb
-      <br />
-      <input
-        name=""
-        type="checkbox"
-        value=""
-      />
-       128 Gb
-      <br />
-      <input
-        name=""
-        type="checkbox"
-        value=""
-      />
-       256 Gb
-    </div>
-  </div>
-  <div
-    className="catalog-filter__section"
-  >
-    <div>
-      Release year:
-    </div>
-    <div>
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(CatalogFilter)>
+    <CatalogFilter
+      fetchFiltersByCategory={[Function]}
+      filters={
+        Object {
+          "type": Object {
+            "field_type": "checkbox",
+            "name": "type",
+            "title": "Type",
+            "variants": Array [
+              "iPad 3",
+              "iPad 4",
+              "iPad 5",
+              "iPad 6",
+            ],
+          },
+        }
+      }
+      passFilters={[Function]}
+    >
       <div>
-        <input
-          name=""
-          type="checkbox"
-          value=""
-        />
-         2012
-        <br />
-        <input
-          name=""
-          type="checkbox"
-          value=""
-        />
-         2011
-        <br />
-        <input
-          name=""
-          type="checkbox"
-          value=""
-        />
-         2010
-        <br />
-        <input
-          name=""
-          type="checkbox"
-          value=""
-        />
-         2009
-        <br />
-        <input
-          name=""
-          type="checkbox"
-          value=""
-        />
-         2008
+        <div
+          className="catalog-filter__section"
+          key="type"
+        >
+          <div>
+            Type
+            :
+          </div>
+          <div>
+            <div
+              key="iPad 3"
+            >
+              <input
+                className="products-filter-property"
+                name="type"
+                onChange={[Function]}
+                type="checkbox"
+                value="iPad 3"
+              />
+              iPad 3
+            </div>
+            <div
+              key="iPad 4"
+            >
+              <input
+                className="products-filter-property"
+                name="type"
+                onChange={[Function]}
+                type="checkbox"
+                value="iPad 4"
+              />
+              iPad 4
+            </div>
+            <div
+              key="iPad 5"
+            >
+              <input
+                className="products-filter-property"
+                name="type"
+                onChange={[Function]}
+                type="checkbox"
+                value="iPad 5"
+              />
+              iPad 5
+            </div>
+            <div
+              key="iPad 6"
+            >
+              <input
+                className="products-filter-property"
+                name="type"
+                onChange={[Function]}
+                type="checkbox"
+                value="iPad 6"
+              />
+              iPad 6
+            </div>
+          </div>
+        </div>
       </div>
-      <a
-        href="#"
-      >
-        more
-      </a>
-    </div>
-  </div>
-</div>
+    </CatalogFilter>
+  </Connect(CatalogFilter)>
+</Provider>
 `;

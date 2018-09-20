@@ -1,26 +1,114 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<div>
-  <h1>
-    test
-  </h1>
-  <div
-    className="catalog-category-wrapper"
+<Provider
+  store={
+    Object {
+      "clearActions": [Function],
+      "dispatch": [Function],
+      "getActions": [Function],
+      "getState": [Function],
+      "replaceReducer": [Function],
+      "subscribe": [Function],
+    }
+  }
+>
+  <Connect(CatalogCategory)
+    match={
+      Object {
+        "params": Object {
+          "cat": "test",
+        },
+      }
+    }
   >
-    <div
-      className="catalog-category__aside"
+    <CatalogCategory
+      fetchProductsByCategory={[Function]}
+      filters={Object {}}
+      match={
+        Object {
+          "params": Object {
+            "cat": "test",
+          },
+        }
+      }
+      products={Array []}
     >
-      <CatalogFilter />
-    </div>
-    <div
-      className="catalog-category__content"
-    >
-      <CatalogSort />
-      <CatalogElementList
-        items={Array []}
-      />
-    </div>
-  </div>
-</div>
+      <div>
+        <h1>
+          test
+        </h1>
+        <div
+          className="catalog-category-wrapper"
+        >
+          <div
+            className="catalog-category__aside"
+          >
+            <Connect(CatalogFilter)>
+              <CatalogFilter
+                fetchFiltersByCategory={[Function]}
+                filters={Object {}}
+                passFilters={[Function]}
+              >
+                <div />
+              </CatalogFilter>
+            </Connect(CatalogFilter)>
+          </div>
+          <div
+            className="catalog-category__content"
+          >
+            <CatalogSort>
+              <div>
+                <div>
+                  <div>
+                    Sort by:
+                  </div>
+                  <div>
+                    <select
+                      name=""
+                      placeholder="Select sorting"
+                    >
+                      <option
+                        value=""
+                      >
+                        No sorting
+                      </option>
+                      <option
+                        value="price_asc"
+                      >
+                        Price ascending
+                      </option>
+                      <option
+                        value="name_asc"
+                      >
+                        Name ascending
+                      </option>
+                      <option
+                        value="price_desc"
+                      >
+                        Price descending
+                      </option>
+                      <option
+                        value="name_desc"
+                      >
+                        Name Descending
+                      </option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </CatalogSort>
+            <CatalogElementList
+              items={Array []}
+            >
+              <div
+                className="product-list"
+              />
+            </CatalogElementList>
+          </div>
+        </div>
+      </div>
+    </CatalogCategory>
+  </Connect(CatalogCategory)>
+</Provider>
 `;
