@@ -1,5 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`dispatch filter action 1`] = `
+Array [
+  Object {
+    "payload": Object {
+      "undefined": Array [
+        undefined,
+      ],
+    },
+    "type": "FILTER_PASSED",
+  },
+]
+`;
+
 exports[`renders correctly 1`] = `
 <Provider
   store={
