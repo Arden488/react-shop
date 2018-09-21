@@ -30,3 +30,13 @@ beforeEach(() => {
 it('renders correctly', () => {
   expect(component).toMatchSnapshot();
 });
+
+it('dispatch filter action', () => {
+  const checkbox = component.find('.products-filter-property').at(0);
+  
+  checkbox.simulate('change', {
+    target: { checked: true }
+  });
+
+  expect(store.getActions()).toMatchSnapshot();
+});
