@@ -9,7 +9,7 @@ it('should handle default state', () => {
   const store = createStore(rootReducer, {});
   
   const actual = store.getState();
-  const expected = { state: {} };
+  const expected = {"filters": {}, "products": [], "productsFilterOptions": {}};
 
   expect(actual).toEqual(expected);
 });
