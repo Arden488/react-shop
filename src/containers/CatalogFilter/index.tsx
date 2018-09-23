@@ -1,11 +1,14 @@
 import * as React from 'react';
 import { connect } from 'react-redux';
+import { withRouter } from 'react-router-dom';
 
 import { fetchFiltersByCategory, passFilters } from '../../actions';
 
 import './styles.css';
 
 interface ICatalogFilterProps {
+  match: any,
+  history: any,
   products: any,
   filters: any,
   passFilters: any,
@@ -20,6 +23,7 @@ interface ICatalogFilterState {
 
 // tslint:disable-next-line
 interface CatalogFilter {
+  category: string,
   options: {
     priceTo?: string,
     priceFrom?: string,
@@ -39,6 +43,8 @@ class CatalogFilter extends React.Component<ICatalogFilterProps, ICatalogFilterS
       priceFrom: '0',
       priceTo: '1000',
     }
+
+    this.category = this.props.match.params.cat;
   }
 
   public render() {
@@ -53,7 +59,14 @@ class CatalogFilter extends React.Component<ICatalogFilterProps, ICatalogFilterS
   }
 
   public componentDidMount() {
-    this.props.fetchFiltersByCategory('ipad');
+    this.props.fetchFiltersByCategory(this.category);
+
+    this.props.history.listen(() => {
+      const path = this.props.history.location.pathname;
+      this.category = path.split('/')[2];
+      this.props.fetchFiltersByCategory(this.category);
+      this.props.passFilters({});
+    });
   }
 
   private getFilterFields(
@@ -206,4 +219,4 @@ function mapDispatchToProps(dispatch: any) {
   }
 }
 
-export default connect(mapStateToProps, mapDispatchToProps)(CatalogFilter);
+export default connect(mapStateToProps, mapDispatchToProps)(withRouter(CatalogFilter));
