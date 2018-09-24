@@ -3,11 +3,7 @@
 exports[`dispatch filter action 1`] = `
 Array [
   Object {
-    "payload": Object {
-      "undefined": Array [
-        undefined,
-      ],
-    },
+    "payload": Object {},
     "type": "FILTER_PASSED",
   },
 ]
@@ -26,88 +22,249 @@ exports[`renders correctly 1`] = `
     }
   }
 >
-  <Connect(CatalogFilter)>
-    <CatalogFilter
-      fetchFiltersByCategory={[Function]}
-      filters={
+  <MemoryRouter
+    initialEntries={
+      Array [
         Object {
-          "type": Object {
-            "field_type": "checkbox",
-            "name": "type",
-            "title": "Type",
-            "variants": Array [
-              "iPad 3",
-              "iPad 4",
-              "iPad 5",
-              "iPad 6",
-            ],
+          "key": "abcdef",
+          "pathname": "/catalog/ipad",
+        },
+      ]
+    }
+  >
+    <Router
+      history={
+        Object {
+          "action": "POP",
+          "block": [Function],
+          "canGo": [Function],
+          "createHref": [Function],
+          "entries": Array [
+            Object {
+              "hash": "",
+              "key": "abcdef",
+              "pathname": "/catalog/ipad",
+              "search": "",
+            },
+          ],
+          "go": [Function],
+          "goBack": [Function],
+          "goForward": [Function],
+          "index": 0,
+          "length": 1,
+          "listen": [Function],
+          "location": Object {
+            "hash": "",
+            "key": "abcdef",
+            "pathname": "/catalog/ipad",
+            "search": "",
           },
+          "push": [Function],
+          "replace": [Function],
         }
       }
-      passFilters={[Function]}
     >
-      <div>
-        <div
-          className="catalog-filter__section"
-          key="type"
+      <Connect(withRouter(CatalogFilter))>
+        <withRouter(CatalogFilter)
+          fetchFiltersByCategory={[Function]}
+          filters={
+            Object {
+              "price_range": Object {
+                "field_type": "range",
+                "name": "price",
+                "options": Object {
+                  "max": "1000",
+                  "min": "300",
+                },
+                "title": "Price range",
+              },
+              "type": Object {
+                "field_type": "checkbox",
+                "name": "type",
+                "title": "Type",
+                "variants": Array [
+                  "iPad 3",
+                  "iPad 4",
+                  "iPad 5",
+                  "iPad 6",
+                ],
+              },
+            }
+          }
+          passFilters={[Function]}
         >
-          <div>
-            Type
-            :
-          </div>
-          <div>
-            <div
-              key="iPad 3"
+          <Route>
+            <CatalogFilter
+              fetchFiltersByCategory={[Function]}
+              filters={
+                Object {
+                  "price_range": Object {
+                    "field_type": "range",
+                    "name": "price",
+                    "options": Object {
+                      "max": "1000",
+                      "min": "300",
+                    },
+                    "title": "Price range",
+                  },
+                  "type": Object {
+                    "field_type": "checkbox",
+                    "name": "type",
+                    "title": "Type",
+                    "variants": Array [
+                      "iPad 3",
+                      "iPad 4",
+                      "iPad 5",
+                      "iPad 6",
+                    ],
+                  },
+                }
+              }
+              history={
+                Object {
+                  "action": "POP",
+                  "block": [Function],
+                  "canGo": [Function],
+                  "createHref": [Function],
+                  "entries": Array [
+                    Object {
+                      "hash": "",
+                      "key": "abcdef",
+                      "pathname": "/catalog/ipad",
+                      "search": "",
+                    },
+                  ],
+                  "go": [Function],
+                  "goBack": [Function],
+                  "goForward": [Function],
+                  "index": 0,
+                  "length": 1,
+                  "listen": [Function],
+                  "location": Object {
+                    "hash": "",
+                    "key": "abcdef",
+                    "pathname": "/catalog/ipad",
+                    "search": "",
+                  },
+                  "push": [Function],
+                  "replace": [Function],
+                }
+              }
+              location={
+                Object {
+                  "hash": "",
+                  "key": "abcdef",
+                  "pathname": "/catalog/ipad",
+                  "search": "",
+                }
+              }
+              match={
+                Object {
+                  "isExact": false,
+                  "params": Object {},
+                  "path": "/",
+                  "url": "/",
+                }
+              }
+              passFilters={[Function]}
             >
-              <input
-                className="products-filter-property"
-                name="type"
-                onChange={[Function]}
-                type="checkbox"
-                value="iPad 3"
-              />
-              iPad 3
-            </div>
-            <div
-              key="iPad 4"
-            >
-              <input
-                className="products-filter-property"
-                name="type"
-                onChange={[Function]}
-                type="checkbox"
-                value="iPad 4"
-              />
-              iPad 4
-            </div>
-            <div
-              key="iPad 5"
-            >
-              <input
-                className="products-filter-property"
-                name="type"
-                onChange={[Function]}
-                type="checkbox"
-                value="iPad 5"
-              />
-              iPad 5
-            </div>
-            <div
-              key="iPad 6"
-            >
-              <input
-                className="products-filter-property"
-                name="type"
-                onChange={[Function]}
-                type="checkbox"
-                value="iPad 6"
-              />
-              iPad 6
-            </div>
-          </div>
-        </div>
-      </div>
-    </CatalogFilter>
-  </Connect(CatalogFilter)>
+              <div>
+                <div
+                  className="catalog-filter__section"
+                  key="price"
+                >
+                  <div>
+                    Price range
+                    :
+                  </div>
+                  <div>
+                    <div>
+                      From $
+                      <input
+                        className="products-filter-property products-filter-price-from"
+                        name="{name}[]"
+                        onChange={[Function]}
+                        size={4}
+                        type="text"
+                        value="300"
+                      />
+                      to $
+                      <input
+                        className="products-filter-property products-filter-price-to"
+                        name="{name}[]"
+                        onChange={[Function]}
+                        size={4}
+                        type="text"
+                        value="1000"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="catalog-filter__section"
+                  key="type"
+                >
+                  <div>
+                    Type
+                    :
+                  </div>
+                  <div>
+                    <div
+                      key="iPad 3"
+                    >
+                      <input
+                        className="products-filter-property"
+                        name="type"
+                        onChange={[Function]}
+                        type="checkbox"
+                        value="iPad 3"
+                      />
+                      iPad 3
+                    </div>
+                    <div
+                      key="iPad 4"
+                    >
+                      <input
+                        className="products-filter-property"
+                        name="type"
+                        onChange={[Function]}
+                        type="checkbox"
+                        value="iPad 4"
+                      />
+                      iPad 4
+                    </div>
+                    <div
+                      key="iPad 5"
+                    >
+                      <input
+                        className="products-filter-property"
+                        name="type"
+                        onChange={[Function]}
+                        type="checkbox"
+                        value="iPad 5"
+                      />
+                      iPad 5
+                    </div>
+                    <div
+                      key="iPad 6"
+                    >
+                      <input
+                        className="products-filter-property"
+                        name="type"
+                        onChange={[Function]}
+                        type="checkbox"
+                        value="iPad 6"
+                      />
+                      iPad 6
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </CatalogFilter>
+          </Route>
+        </withRouter(CatalogFilter)>
+      </Connect(withRouter(CatalogFilter))>
+    </Router>
+  </MemoryRouter>
 </Provider>
 `;
