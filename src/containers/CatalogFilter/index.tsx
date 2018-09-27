@@ -193,12 +193,16 @@ class CatalogFilter extends React.Component<ICatalogFilterProps, ICatalogFilterS
 
     if (to && to.value !== '') {
       this.options.priceTo = to.value;
-      this.setState({ priceTo: to.value });
+      const newState = {};
+      newState[to.name] = to.value;
+      this.setState(newState);
     }
 
     if (from && from.value !== '') {
       this.options.priceFrom = from.value;
-      this.setState({ priceFrom: from.value });
+      const newState = {};
+      newState[to.name] = from.value;
+      this.setState(newState);
     }
 
     this.props.passFilters(this.options);
