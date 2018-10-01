@@ -17,7 +17,7 @@ interface ICatalogFilterProps {
 
 interface ICatalogFilterState {
   filterProps: object,
-  price?: string[],
+  price_range?: string[],
   name?: any,
 }
 
@@ -31,6 +31,19 @@ interface CatalogFilter {
 }
 
 class CatalogFilter extends React.Component<ICatalogFilterProps, ICatalogFilterState> {
+  public static getDerivedStateFromProps(props: any, state: any) {
+    if (props.filters !== state.filters) {
+      Object.keys(props.filters).forEach((name: string) => {
+        if (props.filters[name].field_type === 'range') {
+          state[name] = [props.filters[name].options.min, props.filters[name].options.max];
+          return state;
+        }
+      });
+    }
+
+    return null;
+  }
+
   constructor(props: any) {
     super(props);
 
@@ -40,7 +53,7 @@ class CatalogFilter extends React.Component<ICatalogFilterProps, ICatalogFilterS
 
     this.state = {
       filterProps: {},
-      price: ['0', '1000'],
+      price_range: ['0', '1000'],
     }
 
     this.category = this.props.match.params.cat;
@@ -52,13 +65,6 @@ class CatalogFilter extends React.Component<ICatalogFilterProps, ICatalogFilterS
     if ( !filters) {
       return 'Loading...';
     }
-
-    Object.keys(filters).forEach((name: string) => {
-      const filter = filters[name];
-      if (filter.field_type === 'range') {
-        this.setState({ name: [filter.min, filter.max] });
-      }
-    });
 
     const filterSections = this.outputFilters(filters);
     
@@ -154,15 +160,13 @@ class CatalogFilter extends React.Component<ICatalogFilterProps, ICatalogFilterS
   }
 
   private outputRange(name: string, options: { min: string, max: string }) {
-    const fieldName = `${name}[]`;
-
     return (
       <div>
         From $
         <input 
           type="text" 
           className="products-filter-property products-filter-price-from"
-          name={fieldName}
+          name={name}
           value={options.min} 
           onChange={this.handlePropertyPriceRange}
           size={4} /> 
@@ -170,7 +174,7 @@ class CatalogFilter extends React.Component<ICatalogFilterProps, ICatalogFilterS
         <input 
           type="text" 
           className="products-filter-property products-filter-price-to"
-          name={fieldName}
+          name={name}
           value={options.max}
           onChange={this.handlePropertyPriceRange}
           size={4} />
@@ -204,19 +208,20 @@ class CatalogFilter extends React.Component<ICatalogFilterProps, ICatalogFilterS
     const from = (document.querySelector('.products-filter-price-from') as HTMLInputElement);
     const to = (document.querySelector('.products-filter-price-to') as HTMLInputElement);
 
+    const newState = {};
+    newState[to.name] = [];
+
     if (to && to.value !== '') {
       this.options.priceTo = to.value;
-      const newState = {};
-      newState[to.name] = to.value;
-      this.setState(newState);
+      newState[to.name][1] = to.value;
     }
 
     if (from && from.value !== '') {
       this.options.priceFrom = from.value;
-      const newState = {};
-      newState[to.name] = from.value;
-      this.setState(newState);
+      newState[from.name][0] = from.value;
     }
+
+    this.setState(newState);
 
     this.props.passFilters(this.options);
   }
