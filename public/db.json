@@ -121,7 +121,7 @@
       },
       "price_range": {
         "title": "Price range",
-        "name": "price",
+        "name": "price_range",
         "field_type": "range",
         "options": {
           "min": "50",
@@ -144,7 +144,7 @@
       },
       "price_range": {
         "title": "Price range",
-        "name": "price",
+        "name": "price_range",
         "field_type": "range",
         "options": {
           "min": "300",
@@ -165,7 +165,7 @@
       },
       "release_year": {
         "title": "Release year",
-        "name": "year",
+        "name": "release_year",
         "field_type": "range",
         "options": {
           "min": "2008",
@@ -187,7 +187,7 @@
         "variants": ["Gold rose", "Space gray", "Onyx Black", "Silver"]
       },
       "price_range": {
-        "name": "price",
+        "name": "price_range",
         "title": "Price range",
         "field_type": "range",
         "options": {
@@ -209,7 +209,7 @@
       },
       "release_year": {
         "name": "Release year",
-        "name": "year",
+        "name": "release_year",
         "field_type": "range",
         "options": {
           "min": "2008",
@@ -232,7 +232,7 @@
       },
       "price_range": {
         "title": "Price range",
-        "name": "price",
+        "name": "price_range",
         "field_type": "range",
         "options": {
           "min": "600",
@@ -253,7 +253,7 @@
       },
       "release_year": {
         "title": "Release year",
-        "name": "year",
+        "name": "release_year",
         "field_type": "range",
         "options": {
           "min": "2008",
