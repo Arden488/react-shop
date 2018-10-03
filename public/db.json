@@ -50,7 +50,7 @@
       "screen_size": "9",
       "memory_size": "64",
       "image": "iphone8_red.webp",
-      "price": "59990",
+      "price": "59900",
       "title": "Apple iPad 128 ГБ"
     }, {
       "id": 4,
@@ -95,7 +95,7 @@
       "screen_size": "5",
       "memory_size": "128",
       "image": "iphone8_red.webp",
-      "price": "59990",
+      "price": "59900",
       "title": "Apple iPhone 8 256 ГБ (PRODUCT)RED"
     }],
     "mac": [{
@@ -191,8 +191,8 @@
         "title": "Price range",
         "field_type": "range",
         "options": {
-          "min": "300",
-          "max": "1000"
+          "min": "39900",
+          "max": "59900"
         }
       },
       "screen_size": {
