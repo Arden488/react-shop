@@ -167,7 +167,7 @@ class CatalogFilter extends React.Component<ICatalogFilterProps, ICatalogFilterS
           name={name}
           value={this.state[name][0]} 
           onChange={this.handlePropertyPriceRange}
-          size={4} /> 
+          size={5} /> 
         to $
         <input 
           type="text" 
@@ -175,7 +175,7 @@ class CatalogFilter extends React.Component<ICatalogFilterProps, ICatalogFilterS
           name={name}
           value={this.state[name][1]} 
           onChange={this.handlePropertyPriceRange}
-          size={4} />
+          size={5} />
       </div>
     )
   }
