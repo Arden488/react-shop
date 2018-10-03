@@ -65,16 +65,28 @@ class CatalogCategory extends React.PureComponent<ICatalogCategoryProps, ICatalo
   }
 
   private filterProducts(items: [], options: object) {
-    return items.filter((item: object) => {
+    return items.filter((item: { price: string }) => {
       let included = true;
       
       Object.keys(options).forEach((key: string) => {
         const element = options[key];
-        const fieldName: string = key.replace('filter_', '');
 
         if (element.length > 0) {
-          if (element.indexOf(item[fieldName]) === -1) {
-            included = false;
+          switch (key) {
+            case 'priceFrom':
+              if ( parseInt(element, 0) > parseInt(item.price, 0) ) {
+                included = false;
+              }
+              break;
+            case 'priceTo':
+              if ( parseInt(element, 0) < parseInt(item.price, 0) ) {
+                included = false;
+              }
+              break;
+            default:
+              if (element.indexOf(item[key]) === -1) {
+                included = false;
+              }
           }
         }
       });
