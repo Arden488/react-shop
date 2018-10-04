@@ -96,7 +96,7 @@
       "memory_size": "128",
       "image": "iphone8_red.webp",
       "price": "59900",
-      "title": "Apple iPhone 8 256 ГБ (PRODUCT)RED"
+      "title": "Apple iPhone 7 256 ГБ (PRODUCT)RED"
     }],
     "mac": [{
       "id": 1,
@@ -208,7 +208,7 @@
         "variants": ["16Gb", "32Gb", "128Gb", "256Gb", "512Gb"]
       },
       "release_year": {
-        "name": "Release year",
+        "title": "Release year",
         "name": "release_year",
         "field_type": "range",
         "options": {
