@@ -35,7 +35,7 @@ class CatalogCategory extends React.PureComponent<ICatalogCategoryProps, ICatalo
   }
 
   public render() {
-    const products = this.filterProducts(this.props.products || [], this.props.filters || {});
+    const products = this.filterProducts(this.props.products.data || [], this.props.filters.data || {});
 
     return (
       <div>
@@ -98,8 +98,8 @@ class CatalogCategory extends React.PureComponent<ICatalogCategoryProps, ICatalo
 
 function mapStateToProps(state: any) {
   return {
-    filters: state.productsFilterOptions.data,
-    products: state.products.data,
+    filters: state.productsFilterOptions,
+    products: state.products,
   }
 }
 
